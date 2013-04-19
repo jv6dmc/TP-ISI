@@ -111,16 +111,7 @@
 	 	  <div><span class="label label-important">Evènement</span></div><p class="text">A ne pas manquer!!Je vous donne rendez-vous au Salon de la Photographie de Montréal, au Palais des Congrès du 19 au 24 Avril 2013</p>
           <a id="more" rel="popover"  class="btn btn-danger btn-mini">Détails</a>  
 		</div>
-		<div>
-		  <footer>
-		    <ul class="pager">
-			  <li class="previous"><a href="index.html"><img src="assets/images/home.png" alt="glyphicon" class='glyph'/>Back to Home</a></li>
-			  <li id="copyright" >Réalisé par N. McClure & B. Riou, Avril 2013 , ISI©</li>
-			  <li class="next"><a href="index.html"><img src="assets/images/top.png" alt="glyphicon" class='glyph'/>Back to top</a></li>
-			</ul>
-		  </footer>	
-	    </div>
-      </div>
+		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
       <script src="assets/js/bootstrap.min.js"></script> 
 	  <script src="assets/js/main.js"></script> 
