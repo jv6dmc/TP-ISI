@@ -279,12 +279,12 @@ $(document).ready(function() {
   
   $('#btn_submit').click(function() {
     if (valide_formulaire()==true) {
-      window.location.replace("confirmation.html");
+      window.location.replace("confirmation.php");
     }
   });
   
-  if ($("body").data("title") === "confirmation.html") {
-    var url = "index.html";
+  if ($("body").data("title") === "confirmation.php") {
+    var url = "index.php";
 
     //5000 is the number of milliseconds (or 5 seconds) that you want to wait before redirection.
     var delay = 5000;

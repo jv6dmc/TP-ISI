@@ -25,6 +25,8 @@
 				<li class="divider-vertical"></li>
 				<li><a href="index.php">À Propos</a></li>
 				<li class="divider-vertical"></li>
+        <li><a href="produits.php">Produits</a></li>
+				<li class="divider-vertical"></li>
 			  </ul>
 			  <ul class="nav pull-right">
 				<li class="divider-vertical"></li>

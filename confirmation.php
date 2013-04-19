@@ -15,7 +15,7 @@
 		<script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="assets/js/main.js" type="text/javascript"></script>
     </head>
-    <body data-title='confirmation.html'>
+    <body data-title='confirmation.php'>
 	  <?php include("menu.php"); ?>
         <div id="bloc_confirmation">
           <ul class="span6 offset4">
