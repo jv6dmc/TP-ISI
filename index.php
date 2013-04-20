@@ -74,7 +74,7 @@
                       <img class="peopleCarouselImg" src="assets/images/caroussel/carousel5.jpg" alt="">
                       <div class="carousel-caption">
                         <h4>Vitesse sur asphalte</h4>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. </p>
                       </div>
                     </div>
                   </div>
@@ -106,11 +106,12 @@
 			  </div>
 		    </div>
 	  	  </div>
-        </div>
-		<div id="event" class=" hero-unit">
+        <div id="event" class=" hero-unit">
 	 	  <div><span class="label label-important">Evènement</span></div><p class="text">A ne pas manquer!!Je vous donne rendez-vous au Salon de la Photographie de Montréal, au Palais des Congrès du 19 au 24 Avril 2013</p>
           <a id="more" rel="popover"  class="btn btn-danger btn-mini">Détails</a>  
 		</div>
+        </div>
+		
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
       <script src="assets/js/bootstrap.min.js"></script> 

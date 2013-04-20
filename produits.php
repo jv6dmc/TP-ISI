@@ -9,9 +9,9 @@
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
 		<title>World-Pictures- Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
-		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+		<!--<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">-->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />  
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     </head>
     <body>
      <script type="text/javascript">
@@ -28,8 +28,11 @@
 
     </script>
 	  <?php include("menu.php"); ?>
-        <div id="bloc">        
-		    </div>
+    <div id="bloc_produits">
+      <div id="bloc_couleur">
+        <li>test</li>
+      </div>
+    </div>
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
       <script src="assets/js/bootstrap.min.js"></script> 
