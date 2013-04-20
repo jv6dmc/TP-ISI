@@ -17,7 +17,7 @@ body {
 
 .container {
    background-color:; 
-   padding:5px;
+   padding-top:5px;
 }
 header {
 	height: 160px;
@@ -188,13 +188,13 @@ color:#eee;
 /*-------contact.html-----*/
 
 #bloc_contact {
-  height:1000px;
   background-color:#eee;
   /*margin-top:-80px;*/
   -moz-border-radius: 6px;
     border-radius: 6px;
     border-radius: 6px;
     margin-top: -25px;
+    padding-bottom: 10px;
 }
 
 #bloc_contact>h3 {
@@ -227,9 +227,14 @@ color:#eee;
   margin-left: 60px;
 }
 
+#bloc_contact #map {
+  margin-bottom:10px;
+}
+
+
 #bloc_contact #form {
-  height:550px;
   margin-bottom:30px;
+  padding-bottom: 30px;
 }
 
 .form_position, #checkbox01 {
@@ -322,9 +327,9 @@ a.thumbnail {
   padding-left:20px;
   padding-right:0;
   width:920px;
-  height:1060px;
   padding-top:0;
   background-color:#eee;
+  padding-bottom: 90px;
 
 }
 

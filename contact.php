@@ -114,9 +114,8 @@
 			  <a href="mailto:#">worldpictures@gmail.com</a>
 		    </address> 
             <div id="frame_map"><iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Montr%C3%A9al,+QC&amp;aq=0&amp;oq=montreal&amp;sll=45.605943,-73.709509&amp;sspn=0.301673,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Montr%C3%A9al,+Qu%C3%A9bec&amp;t=m&amp;ll=45.508272,-73.553467&amp;spn=0.288723,0.411987&amp;z=10&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=Montr%C3%A9al,+QC&amp;aq=0&amp;oq=montreal&amp;sll=45.605943,-73.709509&amp;sspn=0.301673,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Montr%C3%A9al,+Qu%C3%A9bec&amp;t=m&amp;ll=45.508272,-73.553467&amp;spn=0.288723,0.411987&amp;z=10&amp;iwloc=A" style="color:#0000FF;text-align:left">Agrandir le plan</a></small></div>
+          <div class="clearfix"></div>
           </div>
-        
-               
 	    </div>
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
