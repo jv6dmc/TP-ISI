@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,55 +29,7 @@
       })();
 
     </script>
-	  <div class="container">
-	    <header>
-		  <img id="logo" src="assets/images/earth2.gif" alt="logo"/>
-		  <div id='titre'>
-		    <h1>World Pictures</h1>
-		    <h2>Le monde est sous vos yeux</h2>
-		  </div>
-		  
-		  <address>
-		    <strong>World Pictures, Inc.</strong><br>
-		    795 Folsom Ave, Suite 600<br>
-			Montréal, QC H3V 5F6<br>
-			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
-			<a href="mailto:#">worldpictures@gmail.com</a>
-		  </address> 
-		</header>
-		<div class="navbar ">
-	        <div class="navbar-inner">
-			  <span class="brand"></span>
-			  <ul class="nav">
-			    <li class="divider-vertical"></li>
-				<li><a href="index.html">Home</a></li>
-				<li class="divider-vertical"></li>
-                <li><a href="galerie.html">Photos</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="index.html">À Propos</a></li>
-				<li class="divider-vertical"></li>
-			  </ul>
-			  <ul class="nav pull-right">
-				<li class="divider-vertical"></li>
-				<li>
-				  <a href="contact.html">Contact</a>
-				</li> 
-			  </ul>
-			</div>
-		</div>
-		<div class="row">
-		  <div id="followus" class="span2 offset10">
-		    <div id="followus_list">
-		    <ul>
-			  <li><a href="http://www.facebook.com/" rel="tooltip"><img id="facebook" data-original-title="Facebook" class="social" src="assets/images/facebook.png"  alt="logo facebook" /></a></li>
-			  <li><a href="http://www.google.com/" rel="tooltip"><img id="googleplus" data-original-title="Google+"  class="social" src="assets/images/googleplus.png"   alt="logo google"/></a></li>
-			  <li><a href="http://www.twitter.com/" rel="tooltip"><img id="twitter" data-original-title="Twitter" class="social" src="assets/images/twitter-bird.png"  alt="logo twitter"/></a></li> 
-			  <li><a href="http://www.instagram.com/" rel="tooltip"><img id="instagram" data-original-title="Instagram" class="social" src="assets/images/instagram.png"   alt="logo google"/></a></li>
-			  <li><a href="http://www.linkedin.com/" rel="tooltip"><img id="linkedin" data-original-title="LinkedIn" class="social" src="assets/images/linkedin.png"   alt="logo google"/></a></li>
-			</ul>
-			</div>
-		  </div>
-        </div>
+	  <?php include("menu.php"); ?>
         <div id="bloc_contact"> 
           <h3>Contact </h3>
           <div id="form">
@@ -161,20 +114,10 @@
 			  <a href="mailto:#">worldpictures@gmail.com</a>
 		    </address> 
             <div id="frame_map"><iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Montr%C3%A9al,+QC&amp;aq=0&amp;oq=montreal&amp;sll=45.605943,-73.709509&amp;sspn=0.301673,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Montr%C3%A9al,+Qu%C3%A9bec&amp;t=m&amp;ll=45.508272,-73.553467&amp;spn=0.288723,0.411987&amp;z=10&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=Montr%C3%A9al,+QC&amp;aq=0&amp;oq=montreal&amp;sll=45.605943,-73.709509&amp;sspn=0.301673,0.727158&amp;ie=UTF8&amp;hq=&amp;hnear=Montr%C3%A9al,+Qu%C3%A9bec&amp;t=m&amp;ll=45.508272,-73.553467&amp;spn=0.288723,0.411987&amp;z=10&amp;iwloc=A" style="color:#0000FF;text-align:left">Agrandir le plan</a></small></div>
+          <div class="clearfix"></div>
           </div>
-        
-               
 	    </div>
-		<div>
-		    <footer>
-		      <ul class="pager">
-			    <li class="previous"><a href="index.html"><img src="assets/images/home.png" alt="glyphicon" class='glyph'/>Back to Home</a></li>
-			    <li id="copyright" >Réalisé par N. McClure & B. Riou, Avril 2013 , ISI©</li>
-			    <li class="next"><a href="#logo"><img src="assets/images/top.png" alt="glyphicon" class='glyph'/>Back to top</a></li>
-			  </ul>
-		    </footer>	
-	    </div>
-      </div>		
+		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
       <script src="assets/js/bootstrap.min.js"></script> 
 	</body>

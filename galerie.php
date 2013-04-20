@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,55 +31,7 @@
       })();
 
     </script>
-	  <div class="container">
-	    <header>
-		  <img id="logo" src="assets/images/earth2.gif" alt="logo"/>
-		  <div id='titre'>
-		    <h1>World Pictures</h1>
-		    <h2>Le monde est sous vos yeux</h2>
-		  </div>
-		  
-		  <address>
-		    <strong>World Pictures, Inc.</strong><br>
-		    795 Folsom Ave, Suite 600<br>
-			Montréal, QC H3V 5F6<br>
-			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
-			<a href="mailto:#">worldpictures@gmail.com</a>
-		  </address> 
-		</header>
-		<div class="navbar ">
-	        <div class="navbar-inner">
-			  <span class="brand"></span>
-			  <ul class="nav">
-			    <li class="divider-vertical"></li>
-				<li><a href="index.html">Home</a></li>
-				<li class="divider-vertical"></li>
-                <li><a href="galerie.html">Photos</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="index.html">À Propos</a></li>
-				<li class="divider-vertical"></li>
-			  </ul>
-			  <ul class="nav pull-right">
-				<li class="divider-vertical"></li>
-				<li>
-				  <a href="contact.html">Contact</a>
-				</li> 
-			  </ul>
-			</div>
-		</div>
-		  <div class="row">
-		    <div id="followus" class="span2 offset10">
-		     <div id="followus_list">
-				<ul>
-				  <li><a href="http://www.facebook.com/" rel="tooltip"><img id="facebook" data-original-title="Facebook" class="social" src="assets/images/facebook.png"  alt="logo facebook" /></a></li>
-				  <li><a href="http://www.google.com/" rel="tooltip"><img id="googleplus" data-original-title="Google+"  class="social" src="assets/images/googleplus.png"   alt="logo google"/></a></li>
-				  <li><a href="http://www.twitter.com/" rel="tooltip"><img id="twitter" data-original-title="Twitter" class="social" src="assets/images/twitter-bird.png"  alt="logo twitter"/></a></li> 
-				  <li><a href="http://www.instagram.com/" rel="tooltip"><img id="instagram" data-original-title="Instagram" class="social" src="assets/images/instagram.png"   alt="logo google"/></a></li>
-				  <li><a href="http://www.linkedin.com/" rel="tooltip"><img id="linkedin" data-original-title="LinkedIn" class="social" src="assets/images/linkedin.png"   alt="logo google"/></a></li>
-				</ul>
-		 	 </div>
-		    </div>
-          </div>
+	  <?php include("menu.php"); ?>
 		<div id="galerie">
 		    <div id="galerie-intro" class="hero-unit">
 			     <h3>Galerie Photos</h3>
@@ -203,16 +156,7 @@
 			    </div>
 		    </div>
 		</div>
-		<div>
-		    <footer>
-		      <ul class="pager">
-			    <li class="previous"><a href="index.html"><img src="assets/images/home.png" alt="glyphicon" class='glyph'/>Back to Home</a></li>
-			    <li id="copyright" >Réalisé par N. McClure & B. Riou, Avril 2013 , ISI©</li>
-			    <li class="next"><a href="#logo"><img src="assets/images/top.png" alt="glyphicon" class='glyph'/>Back to top</a></li>
-			  </ul>
-		    </footer>	
-	    </div>
-      </div>
+		<?php include("footer.php"); ?>
       <script src="assets/js/bootstrap.min.js"></script> 
 	  <script src="assets/js/main.js"></script> 
 	</body>
