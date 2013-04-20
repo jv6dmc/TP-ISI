@@ -392,13 +392,18 @@ $(document).ready(function () {
 	 });
  });
 
+/*-----produits.php----*/
 
-
-
-
-
-
-
-
-
-
+$('.produit').mouseover(function() {
+    $('#'+this.id).addClass('blue');
+  });
+ $('.produit').mouseout(function() {
+     $('#'+this.id).removeClass('blue');
+  });
+/*  
+$('#prod02').mouseover(function() {
+    $('#prod02').addClass('blue');
+  });
+$('#prod02').mouseout(function() {
+    $('#prod02').removeClass('blue');
+  });*/

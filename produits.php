@@ -29,8 +29,29 @@
     </script>
 	  <?php include("menu.php"); ?>
     <div id="bloc_produits">
-      <div id="bloc_couleur">
-        <li>test</li>
+      <div class="produit" id="prod01">
+        <img class="image" src="assets/images/produits/canon_eos_60d.jpg" alt=""/>
+        <ul>
+          <li class="produit_titre">Canon EOS 60D</<li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet, nunc vitae aliquet egestas, nunc nisl varius augue, quis interdum risus nunc sed lorem. Cras at dolor orci. Phasellus et purus odio, vitae consequat magna. Suspendisse sit amet purus quis justo dignissim euismod. Suspendisse felis dolor, lobortis eget gravida id, sagittis at nisl. Cras et diam enim, sodales pretium sapien. Praesent nec velit sapien.</li>
+        </ul>
+      <div class="clearfix"></div>
+    </div>
+      <div class="produit" id="prod02">
+        <img class="image" src="assets/images/produits/canon_eos_60d.jpg" alt=""/>
+        <ul>
+          <li class="produit_titre">Canon EOS 60D</<li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet, nunc vitae aliquet egestas, nunc nisl varius augue, quis interdum risus nunc sed lorem. Cras at dolor orci. Phasellus et purus odio, vitae consequat magna. Suspendisse sit amet purus quis justo dignissim euismod. Suspendisse felis dolor, lobortis eget gravida id, sagittis at nisl. Cras et diam enim, sodales pretium sapien. Praesent nec velit sapien.</li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    <div class="produit" id="prod03">
+        <img class="image" src="assets/images/produits/canon_eos_60d.jpg" alt=""/>
+        <ul>
+          <li class="produit_titre">Canon EOS 60D</<li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet, nunc vitae aliquet egestas, nunc nisl varius augue, quis interdum risus nunc sed lorem. Cras at dolor orci. Phasellus et purus odio, vitae consequat magna. Suspendisse sit amet purus quis justo dignissim euismod. Suspendisse felis dolor, lobortis eget gravida id, sagittis at nisl. Cras et diam enim, sodales pretium sapien. Praesent nec velit sapien.</li>
+        </ul>
+        <div class="clearfix"></div>
       </div>
     </div>
 		<?php include("footer.php"); ?>
