@@ -1,4 +1,6 @@
-<?php include('script.php');?>
+<?php include("script.php");
+      $id_produit = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,9 +11,9 @@
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
 		<title>World-Pictures- Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
-		<!--<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">-->
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />  
     </head>
     <body>
      <script type="text/javascript">
@@ -28,23 +30,19 @@
 
     </script>
 	  <?php include("menu.php"); ?>
-    <div id="bloc_produits">
-      <?php foreach($produits as $id_produit=>$info) {?>
-        <a href="details_produit.php?id=<?php echo($id_produit);?>">
-          <div class="produit" id="<?php echo($id_produit);?>">
-            <img class="image" src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
-            <ul>
-              <li class="produit_titre"><?php echo($produits[$id_produit]['titre']);?></<li>
-              <li><?php echo($produits[$id_produit]['description']);?></li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-        </a>
-      <?php }?>
-    </div>
+        <div id="bloc_details_produit">
+         <h3><?php echo($produits[$id_produit]['titre']);?></h3>
+        <img src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
+        <h4>Caractéristiques</h4>
+        <ul>
+          <li>Prix : <?php echo($produits[$id_produit]['prix']);?>$</li>
+        </ul>
+        <h4>Description</h4>
+        <p><?php echo($produits[$id_produit]['description']);?></p>
+		    </div>
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
       <script src="assets/js/bootstrap.min.js"></script> 
-	  <script src="assets/js/main.js"></script> 
+	  <script src="assets/js/main.js"></script>
 	</body>
 </html>

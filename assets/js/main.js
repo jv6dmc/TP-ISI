@@ -397,15 +397,8 @@ $(document).ready(function () {
 /*-----produits.php----*/
 
 $('.produit').mouseover(function() {
-    $('#'+this.id).addClass('blue');
+    $('#'+this.id).addClass('colorhover');
   });
  $('.produit').mouseout(function() {
-     $('#'+this.id).removeClass('blue');
+     $('#'+this.id).removeClass('colorhover');
   });
-/*  
-$('#prod02').mouseover(function() {
-    $('#prod02').addClass('blue');
-  });
-$('#prod02').mouseout(function() {
-    $('#prod02').removeClass('blue');
-  });*/

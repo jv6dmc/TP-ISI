@@ -166,17 +166,6 @@ ul li {
    padding-right:10px;
 }
 
-
-
-/*h1,h2 {
-color:#eee;
-}*/
-
-
-#event {
-   height:60px;
-}
-
 #more {
   float:right;
   margin-top:-10px;
@@ -363,6 +352,23 @@ a.thumbnail {
   font-size:24px;
 }
 
-.blue {
-  background-color:blue;
+.colorhover {
+  background-color:#C0C0C0;
+}
+.decoration {
+  text-decoration: underline;
+}
+
+#bloc_produits>a:hover {
+ text-decoration: none;
+}
+
+
+/*-----details_produit.php----*/
+#bloc_details_produit{
+  background-color:#eee;
+    margin-top:0px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border-radius: 6px;
 }
