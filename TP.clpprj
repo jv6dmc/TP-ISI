@@ -36,9 +36,9 @@
 	</errors>
 	<codestructure version="4.4">
 		<phptree>
-			<treenode node="footer.php;PHP:PHP Include;C:\wamp\www\TP\confirmation.php;f17;26;27;26;;C:\wamp\www\TP\index.php;f17;114;27;114;;C:\wamp\www\TP\sample.php;f17;32;27;32;;C:\wamp\www\TP\galerie.php;f17;158;27;158;;C:\wamp\www\TP\produits.php;f17;56;27;56;;C:\wamp\www\TP\contact.php;f17;120;27;120;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="footer.php;PHP:PHP Include;C:\wamp\www\TP\contact.php;f17;120;27;120;;C:\wamp\www\TP\confirmation.php;f17;26;27;26;;C:\wamp\www\TP\index.php;f17;114;27;114;;C:\wamp\www\TP\sample.php;f17;32;27;32;;C:\wamp\www\TP\galerie.php;f17;158;27;158;;C:\wamp\www\TP\produits.php;f17;56;27;56;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="menu.php;PHP:PHP Include;C:\wamp\www\TP\confirmation.php;f18;18;26;18;;C:\wamp\www\TP\index.php;f22;31;30;31;;C:\wamp\www\TP\sample.php;f18;29;26;29;;C:\wamp\www\TP\galerie.php;f18;33;26;33;;C:\wamp\www\TP\produits.php;f18;29;26;29;;C:\wamp\www\TP\contact.php;f18;31;26;31;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="menu.php;PHP:PHP Include;C:\wamp\www\TP\contact.php;f18;31;26;31;;C:\wamp\www\TP\confirmation.php;f18;18;26;18;;C:\wamp\www\TP\index.php;f22;31;30;31;;C:\wamp\www\TP\sample.php;f18;29;26;29;;C:\wamp\www\TP\galerie.php;f18;33;26;33;;C:\wamp\www\TP\produits.php;f18;29;26;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 		</phptree>
 		<jstree>
@@ -1314,7 +1314,7 @@
 			</treenode>
 			<treenode node="_default;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f25729;4;25737;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_gaq;JS:JS Var Name;C:\wamp\www\TP\index.php;f10;20;14;20;;C:\wamp\www\TP\sample.php;f10;18;14;18;;C:\wamp\www\TP\galerie.php;f10;22;14;22;;C:\wamp\www\TP\produits.php;f10;18;14;18;;C:\wamp\www\TP\contact.php;f10;20;14;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_gaq;JS:JS Var Name;C:\wamp\www\TP\contact.php;f10;20;14;20;;C:\wamp\www\TP\index.php;f10;20;14;20;;C:\wamp\www\TP\sample.php;f10;18;14;18;;C:\wamp\www\TP\galerie.php;f10;22;14;22;;C:\wamp\www\TP\produits.php;f10;18;14;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="a;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js;f97;12;98;12;;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f49;2;50;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3670;5;3671;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1410,7 +1410,7 @@
 			</treenode>
 			<treenode node="Dn;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f8991;4;8993;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="document;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.fancybox.js;f19;12;27;12;;C:\wamp\www\TP\index.php;f17;25;25;25;;C:\wamp\www\TP\sample.php;f17;23;25;23;;C:\wamp\www\TP\galerie.php;f17;27;25;27;;C:\wamp\www\TP\produits.php;f17;23;25;23;;C:\wamp\www\TP\contact.php;f17;25;25;25;;C:\wamp\www\TP\assets\js\main.js;f2;233;10;233;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="document;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.fancybox.js;f19;12;27;12;;C:\wamp\www\TP\contact.php;f17;25;25;25;;C:\wamp\www\TP\index.php;f17;25;25;25;;C:\wamp\www\TP\sample.php;f17;23;25;23;;C:\wamp\www\TP\galerie.php;f17;27;25;27;;C:\wamp\www\TP\assets\js\main.js;f2;233;10;233;;C:\wamp\www\TP\produits.php;f17;23;25;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="e;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js;f172;12;173;12;;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f12;2;13;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f10;5;11;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1468,7 +1468,7 @@
 			</treenode>
 			<treenode node="G;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f17860;2;17861;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="ga;JS:JS Var Name;C:\wamp\www\TP\index.php;f12;25;14;25;;C:\wamp\www\TP\sample.php;f12;23;14;23;;C:\wamp\www\TP\galerie.php;f12;27;14;27;;C:\wamp\www\TP\produits.php;f12;23;14;23;;C:\wamp\www\TP\contact.php;f12;25;14;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="ga;JS:JS Var Name;C:\wamp\www\TP\contact.php;f12;25;14;25;;C:\wamp\www\TP\index.php;f12;25;14;25;;C:\wamp\www\TP\sample.php;f12;23;14;23;;C:\wamp\www\TP\galerie.php;f12;27;14;27;;C:\wamp\www\TP\produits.php;f12;23;14;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="GET;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f28767;3;28770;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1698,7 +1698,7 @@
 			</treenode>
 			<treenode node="rt;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f24675;2;24677;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="s;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f62;2;63;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3600;5;3601;5;;C:\wamp\www\TP\index.php;f12;27;13;27;;C:\wamp\www\TP\sample.php;f12;25;13;25;;C:\wamp\www\TP\galerie.php;f12;29;13;29;;C:\wamp\www\TP\produits.php;f12;25;13;25;;C:\wamp\www\TP\contact.php;f12;27;13;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="s;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f62;2;63;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3600;5;3601;5;;C:\wamp\www\TP\contact.php;f12;27;13;27;;C:\wamp\www\TP\index.php;f12;27;13;27;;C:\wamp\www\TP\sample.php;f12;25;13;25;;C:\wamp\www\TP\galerie.php;f12;29;13;29;;C:\wamp\www\TP\produits.php;f12;25;13;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="S;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f433;2;434;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1826,12 +1826,12 @@
 	</codestructure><todoblock>
 	</todoblock>
 	<filescache>
-		<file name="C:\wamp\www\TP\assets\js\main.js" crc="228236249"/>
+		<file name="C:\wamp\www\TP\assets\js\main.js" crc="-217437424"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js" crc="2015442929"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery.fancybox.js" crc="2051959001"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js" crc="-2072595312"/>
 		<file name="C:\wamp\www\TP\assets\js\bootstrap.min.js" crc="1700014674"/>
-		<file name="C:\wamp\www\TP\assets\css\main.css" crc="-1616436547"/>
+		<file name="C:\wamp\www\TP\assets\css\main.css" crc="1345105097"/>
 		<file name="C:\wamp\www\TP\assets\css\jquery.fancybox.css" crc="1294405446"/>
 		<file name="C:\wamp\www\TP\assets\css\bootstrap.min.css" crc="-501376967"/>
 		<file name="C:\wamp\www\TP\assets\css\bootstrap-responsive.min.css" crc="-2019374876"/>
@@ -1841,7 +1841,7 @@
 		<file name="C:\wamp\www\TP\index.php" crc="-1747867751"/>
 		<file name="C:\wamp\www\TP\galerie.php" crc="1895678916"/>
 		<file name="C:\wamp\www\TP\footer.php" crc="307092437"/>
-		<file name="C:\wamp\www\TP\contact.php" crc="-545308010"/>
+		<file name="C:\wamp\www\TP\contact.php" crc="-1439115985"/>
 		<file name="C:\wamp\www\TP\confirmation.php" crc="-620333249"/>
 	</filescache>
 </project>
