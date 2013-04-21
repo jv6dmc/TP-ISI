@@ -279,7 +279,9 @@ $(document).ready(function() {
   
   $('#btn_submit').click(function() {
     if (valide_formulaire()==true) {
-      window.location.replace("confirmation.php");
+      return true;
+    } else {
+      return false;
     }
   });
   
