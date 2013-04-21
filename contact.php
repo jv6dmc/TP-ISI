@@ -32,6 +32,7 @@
 	  <?php include("menu.php"); ?>
         <div id="bloc_contact"> 
           <h3>Contact </h3>
+          <form id="formulaire" action="confirmation.php" method="get">
           <div id="form">
             <ul>
               <li class="lbl_contact"><label>Nom</label></li>
@@ -104,7 +105,7 @@
               <li id="submit"><button id="btn_submit">Envoyer</button></li>
             </ul>
           </div>
-          
+          </form>
           <div id="map">
             <address>
 		      <strong>World Pictures, Inc.</strong><br>
