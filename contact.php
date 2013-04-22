@@ -31,7 +31,7 @@
     </script>
 	  <?php include("menu.php"); ?>
         <div id="bloc_contact"> 
-          <h3>Contact...</h3>
+          <h3>Contact</h3>
           <form id="formulaire" action="confirmation.php" method="get">
           <div id="form">
             <ul>
