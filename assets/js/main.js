@@ -300,29 +300,43 @@ $(document).ready(function() {
   
 });
 
-/*-------galerie.html----*/
- /*Debut tooltip */
+
+ /*Debut tooltip et hover reseau sociaux +popover page index.php + fancybox page galerie.php  */
+
 
  $(document).ready(function () {
      $(".social").tooltip({'placement':'left'});
- });
-
- /* fin tooltip*/
- 
- 
- /* debut popover */
- 
-  $(document).ready(function () {
-     $("#more").popover({'placement':'left', 'trigger' : 'hover', "title":"Adresse ,Tarifs & Horaires", "content":"1001 Place Jean-Paul-Riopelle, Montréal, QC H2Z 1H5 / 12$ l'entrée  De 9h a 18h", "delay":"delay: { show: 500, hide: 100 }" });
- });
-	
-/*Fin popover*/	
-
-
-/* debut galerie photo fancybox effects */
-
- $(document).ready(function() {
-    if ($("body").data("title") === "galerie.html") {
+	 $("#more").popover({'placement':'right', 'trigger' : 'hover', "title":"Adresse ,Tarifs & Horaires", "content":"1001 Place Jean-Paul-Riopelle, Montréal, QC H2Z 1H5 / 12$ l'entrée  De 9h a 18h", "delay":"delay: { show: 500, hide: 100 }" });
+	 $("#facebook").hover(function() {
+		$(this).attr("src","assets/images/facebook-hover.png");
+			}, function() {
+		$(this).attr("src","assets/images/facebook.png");
+	});
+	 $("#twitter").hover(function() {
+		$(this).attr("src","assets/images/twitter-bird-hover.png");
+			}, function() {
+		$(this).attr("src","assets/images/twitter-bird.png");
+	});
+	 $("#instagram").hover(function() {
+		$(this).attr("src","assets/images/instagram-hover.png");
+			}, function() {
+		$(this).attr("src","assets/images/instagram.png");
+	});
+	 $("#googleplus").hover(function() {
+		$(this).attr("src","assets/images/googleplus-hover.png");
+			}, function() {
+		$(this).attr("src","assets/images/googleplus.png");
+	});
+	 $("#linkedin").hover(function() {
+		$(this).attr("src","assets/images/linkedin-hover.png");
+			}, function() {
+		$(this).attr("src","assets/images/linkedin.png");
+	});
+	 $("#followtitle").mouseover(function() {
+	   $("#followus").fadeIn(3000)
+	 
+	 });
+	 if ($("body").data("title") === "galerie.html") {
 	  /* Apply fancybox to multiple items */
 	
 	  $("a.grouped_elements").fancybox({
@@ -333,65 +347,8 @@ $(document).ready(function() {
 		  'overlayShow'	    :	false
 	  });
 	}
-	
-});
-
-/* Fin galerie photo fancybox effects */
-
-
-/*hover followus*/
-
-
-
- $(document).ready(function(){
-	$("#facebook").hover(function() {
-		$(this).attr("src","assets/images/facebook-hover.png");
-			}, function() {
-		$(this).attr("src","assets/images/facebook.png");
-	});
-});
- 
-
- $(document).ready(function(){
-	$("#twitter").hover(function() {
-		$(this).attr("src","assets/images/twitter-bird-hover.png");
-			}, function() {
-		$(this).attr("src","assets/images/twitter-bird.png");
-	});
-});
- 
-  $(document).ready(function(){
-	$("#instagram").hover(function() {
-		$(this).attr("src","assets/images/instagram-hover.png");
-			}, function() {
-		$(this).attr("src","assets/images/instagram.png");
-	});
-});
- 
-  $(document).ready(function(){
-	$("#googleplus").hover(function() {
-		$(this).attr("src","assets/images/googleplus-hover.png");
-			}, function() {
-		$(this).attr("src","assets/images/googleplus.png");
-	});
-});
- 
-  $(document).ready(function(){
-	$("#linkedin").hover(function() {
-		$(this).attr("src","assets/images/linkedin-hover.png");
-			}, function() {
-		$(this).attr("src","assets/images/linkedin.png");
-	});
-});
- 
-
-//
-
-$(document).ready(function () {
-     $("#followtitle").mouseover(function() {
-	   $("#followus").fadeIn(3000)
 	 
-	 });
+	 
  });
 
 /*-----produits.php----*/
