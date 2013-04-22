@@ -372,3 +372,9 @@ a.thumbnail {
     border-radius: 6px;
     border-radius: 6px;
 }
+
+#bloc_details_produit>img {
+  width:500px;
+  height:400px;
+  margin-left: 210px;
+}
