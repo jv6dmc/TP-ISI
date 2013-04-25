@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta name="description" content="Blog Photographe amateur" />
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
-		<title>World-Pictures - Contact</title>
+		<title>World-Pictures- Contact</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
 		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -31,7 +31,7 @@
     </script>
 	  <?php include("menu.php"); ?>
         <div id="bloc_contact"> 
-          <h3>Contact</h3>
+          <h3>Contact </h3>
           <form id="formulaire" action="confirmation.php" method="get">
           <div id="form">
             <ul>

@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta name="description" content="Blog Photographe amateur" />
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
-		<title>World-Pictures - Détails Produit</title>
+		<title>World-Pictures- Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
 		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -35,10 +35,12 @@
         <img src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
         <h4>Caractéristiques</h4>
         <ul>
-          <li>Prix : <?php echo($produits[$id_produit]['prix']);?>$</li>
+          <li><strong>Prix</strong> : <?php echo($produits[$id_produit]['prix']);?>$</li>
+		  <li><strong>Détails techniques</strong> : <?php echo($produits[$id_produit]['details']);?></li>
         </ul>
         <h4>Description</h4>
         <p><?php echo($produits[$id_produit]['description']);?></p>
+		<a id="back_button" href="produits.php" class="btn btn-primary btn-medium btn btn-info">Retour Liste</a>
 		    </div>
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>

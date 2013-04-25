@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta name="description" content="Blog Photographe amateur" />
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
-		<title>World-Pictures - Produits</title>
+		<title>World-Pictures- Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
 		<!--<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">-->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
           <div class="produit" id="<?php echo($id_produit);?>">
             <img class="image" src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
             <ul>
-              <li class="produit_titre"><?php echo($produits[$id_produit]['titre']);?></<li>
+              <li class="produit_titre"><?php echo($produits[$id_produit]['titre']);?></li>
               <li><?php echo($produits[$id_produit]['description']);?></li>
             </ul>
             <div class="clearfix"></div>

@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta name="description" content="Blog Photographe amateur" />
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
-		<title>World-Pictures - Home</title>
+		<title>World-Pictures- Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
 		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
