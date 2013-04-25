@@ -1,30 +1,63 @@
-<?php ?>
+<?php
+ session_start();
+	
+
+	
+	require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+	require(REP_USERS.'user.inc');
+
+  function find_User_ByIdPw($username, $pw){
+	
+	$trouve = 0;
+	foreach($GLOBALS['users'] as $id => $user){
+		if (($user['password']==$pw)&&($id==$username)){
+			$trouve = $id;
+      echo($trouve);
+		}
+	}
+	
+	return $trouve;
+	
+}
+
+
+//var_dump($_POST);
+if (count($_POST)>0){
+	// c'est un loop back'
+	$utilisateur = find_User_ByIdPw($_POST['username'], $_POST['password']);
+	echo($utilisateur);
+  if ($utilisateur!='0'){
+		// Il peut se logger
+
+		echo('Bienvenue');
+		$_SESSION[UTILISATEUR] = $utilisateur;		
+		//$chemin = REP_ETUDIANTS.'detail.php';		
+		
+	}
+	else{
+		// Afficher desolé
+    echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!12345");
+		session_destroy();
+	}
+	header("");	
+}
+
+	//var_dump($_SESSION);
+
+
+
+
+
+
+
+
+
+?>
+
 <div class="container">
 	    <header>
 		  <a href="index.php"><img id="logo" src="assets/images/earth2.gif" alt="logo"/></a>
 		  <a href="index.php"><img id="logo1" src="assets/images/logo.png" alt="logo"/></a>
-          <a href="#login-box" class="btn btn-primary btn-medium btn btn-info login login-window ">Login</a>
-		  <div id="login-box" class="login-popup">
-          <a href="#" class="close"><img src="assets/images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-          <form method="post" class="signin" action="#">
-                <fieldset class="textbox">
-            	<label class="username">
-                <span>Username or email</span>
-                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
-                </label>
-                
-                <label class="password">
-                <span>Password</span>
-                <input id="password" name="password" value="" type="password" placeholder="Password">
-                </label>
-                
-                <button class="submit button" type="button">Sign in</button>
-                
-                
-                </fieldset>
-          </form>
-		</div>
-		  
 		  <div id='titre'>
 		    <h1 class="hidden">World Pictures</h1>
 		    <h2 class="hidden">Le monde est sous vos yeux</h2>
@@ -36,6 +69,37 @@
 			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
 			<a href="mailto:#">worldpictures@gmail.com</a>
 		  </address>
+      <p id="msg_welcome">
+        Bienvenue nom
+      </p>
+        <ul id="connexion">
+          <li class="connexion"><a>S'inscrire</a></li>
+          <li class="connexion">|</li>
+          <li class="connexion "><a href="#login-box" class="login-window">Connexion</a></li>
+        </ul>
+        <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="assets/images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="index.php">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Identifiant</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Identifiant">
+                </label>
+                
+                <label class="password">
+                <span>Mot de passe</span>
+                <input id="password" name="password" value="" type="password" placeholder="Mot de passe">
+                </label>
+                
+                <button class="submit button" type="submit">Connexion</button>
+                
+                <p>
+                <a class="forgot" href="index.php">S'inscrire</a>
+                </p>
+                
+                </fieldset>
+          </form>
+		</div>
 		</header>
 		<div class="navbar ">
 	        <div class="navbar-inner">
@@ -44,11 +108,9 @@
 			    <li class="divider-vertical"></li>
 				<li><a href="index.php">Accueil</a></li>
 				<li class="divider-vertical"></li>
-                <li><a href="galerie.php">Photos</a></li>
+        <li><a href="galerie.php">Photos</a></li>
 				<li class="divider-vertical"></li>
 				<li><a href="produits.php">Produits</a></li>
-				<li class="divider-vertical"></li>
-                <li><a href="index.php">Inscription</a></li>
 				<li class="divider-vertical"></li>
 			  </ul>
 			  <ul class="nav pull-right">

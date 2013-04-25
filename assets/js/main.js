@@ -372,8 +372,8 @@ $(document).ready(function() {
 		$(loginBox).fadeIn(300);
 		
 		//Set the center alignment padding + border
-		var popMargTop = ($(loginBox).height() + 24) / 2; 
-		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+    var popMargLeft = ($(loginBox).width() + 24)/2;
+    var popMargTop = ($(loginBox).height() + 24)/2; 
 		
 		$(loginBox).css({ 
 			'margin-top' : -popMargTop,
@@ -388,7 +388,7 @@ $(document).ready(function() {
 	});
 	
 	// When clicking on the button close or the mask layer the popup closed
-	$('a.close, #mask').live('click', function() { 
+	$('a.close, #mask').on('click', function() { 
 	  $('#mask , .login-popup').fadeOut(300 , function() {
 		$('#mask').remove();  
 	}); 
