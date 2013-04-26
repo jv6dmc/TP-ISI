@@ -202,7 +202,7 @@ ul li {
 
 /*-------contact.html-----*/
 
-#bloc_contact {
+#bloc_contact,#bloc_inscription {
   background-color:#eee;
   /*margin-top:-80px;*/
   -moz-border-radius: 6px;
@@ -212,7 +212,7 @@ ul li {
     padding-bottom: 10px;
 }
 
-#bloc_contact>h3 {
+#bloc_contact>h3 ,#bloc_inscription>h3 {
   padding-top: 40px;
 }
 
@@ -226,7 +226,7 @@ ul li {
   padding-right: 30px;
 }
 
-#bloc_contact ul {
+#bloc_contact ul,#bloc_inscription ul {
   margin-top: 60px;
 }
 
@@ -235,7 +235,8 @@ ul li {
   margin-left:155px;
 }
 
-#bloc_contact #form,
+
+#bloc_contact #form,#bloc_inscription #form,
 #map {
   border: 2px solid black;
   width:800px;
@@ -247,7 +248,7 @@ ul li {
 }
 
 
-#bloc_contact #form {
+#bloc_contact #form ,#bloc_inscription #form{
   margin-bottom:30px;
   padding-bottom: 30px;
 }
@@ -561,11 +562,40 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 /*-----favoris.php------*/
 
 #bloc_favoris>h3 {
-  padding-top:30px;
+  padding-top:10px;
+  padding-bottom:15px;
 }
 
 .remove_favoris {
   position:absolute;
   margin-left:750px;
   margin-top:20px;
+}
+
+/*inscription*/
+
+.intro {
+	text-align:center;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+#reset  {
+  float: left;
+}
+
+#form #submit {
+  margin-left: 70px;
+}
+
+.img_titre {
+	width: 40px;
+	height: :40px;
+	margin:20px;
+	margin-bottom: 20px;
+}
+
+#bloc_inscription #submit {
+  float:left;
+  margin-left:70px;
 }

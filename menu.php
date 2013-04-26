@@ -57,7 +57,7 @@ if (count($_POST)>0){
 <div class="container">
 	    <header>
 		  <a href="index.php"><img id="logo" src="assets/images/earth2.gif" alt="logo"/></a>
-		  <a href="index.php"><img id="logo1" src="assets/images/logo.png" alt="logo"/></a>
+		  <img id="logo1" src="assets/images/logo.png" alt="logo"/>
 		  <div id='titre'>
 		    <h1 class="hidden">World Pictures</h1>
 		    <h2 class="hidden">Le monde est sous vos yeux</h2>
@@ -73,7 +73,7 @@ if (count($_POST)>0){
         Bienvenue nom
       </p>-->
         <ul id="connexion">
-          <li class="connexion"><a>S'inscrire</a></li>
+          <li class="connexion"><a href="inscription.php">S'inscrire</a></li>
           <li class="connexion">|</li>
           <li class="connexion "><a href="#login-box" class="login-window">Connexion</a></li>
         </ul>
@@ -94,7 +94,7 @@ if (count($_POST)>0){
                 <button class="submit button" type="submit">Connexion</button>
                 
                 <p>
-                <a class="forgot" href="index.php">S'inscrire</a>
+                <a class="forgot" href="inscription.php">S'inscrire</a>
                 </p>
                 
                 </fieldset>

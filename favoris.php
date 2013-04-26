@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
 	    require(REP_USERS.'user.inc');
-      include('script.php');
+      include('data/bdd.inc');
       
 if (isset($_GET['remove'])) {
   //echo($_GET['remove']);

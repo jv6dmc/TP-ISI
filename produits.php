@@ -1,4 +1,4 @@
-<?php include('script.php');?>
+<?php include('data/bdd.inc');?>
 <!DOCTYPE html>
 <html>
     <head>
