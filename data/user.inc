@@ -6,7 +6,9 @@ $users = array(
 								'email' => 'nicolas.mcclure@hotmail.ca',
 								'password'=> '1234',
 								'favoris' => array(
-												
+												'prod01',
+                        'prod03',
+                        'prod04'
 												)
 							)
 					); 

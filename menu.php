@@ -69,9 +69,9 @@ if (count($_POST)>0){
 			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
 			<a href="mailto:#">worldpictures@gmail.com</a>
 		  </address>
-      <p id="msg_welcome">
+      <!--<p id="msg_welcome">
         Bienvenue nom
-      </p>
+      </p>-->
         <ul id="connexion">
           <li class="connexion"><a>S'inscrire</a></li>
           <li class="connexion">|</li>

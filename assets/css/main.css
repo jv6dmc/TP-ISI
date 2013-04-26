@@ -354,12 +354,14 @@ a.thumbnail {
 }
 
 /*------produits.php-----*/
-#bloc_produits {
+#bloc_produits, #bloc_favoris {
   background-color:#eee;
   margin-top:0px;
   -moz-border-radius: 6px;
   border-radius: 6px;
   border-radius: 6px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .produit {
@@ -385,7 +387,7 @@ a.thumbnail {
   text-decoration: underline;
 }
 
-#bloc_produits>a:hover {
+#bloc_produits>a:hover, #bloc_favoris>a:hover, .remove_favoris:hover {
  text-decoration: none;
 }
 
@@ -554,4 +556,16 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 }
 #msg_welcome {
   margin-top:10px;
+}
+
+/*-----favoris.php------*/
+
+#bloc_favoris>h3 {
+  padding-top:30px;
+}
+
+.remove_favoris {
+  position:absolute;
+  margin-left:750px;
+  margin-top:20px;
 }
