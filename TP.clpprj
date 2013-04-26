@@ -3267,6 +3267,8 @@
 	</yiidata>
 	<todoblock>
 	</todoblock>
+	<dbgurls>
+	</dbgurls>
 	<filescache>
 		<file name="C:\wamp\www\TP\users\bdd.inc" crc="343608025"/>
 		<file name="C:\wamp\www\TP\managers\texteManager.php" crc="1111678153"/>
