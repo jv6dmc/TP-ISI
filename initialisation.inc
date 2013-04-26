@@ -16,7 +16,6 @@ define('REP_USERS',ROOT.'data/' );
 define('UTILISATEUR', 'user');
 
 
-
 ?>
 
 

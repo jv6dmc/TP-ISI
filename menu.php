@@ -4,15 +4,19 @@
 
 	
 	require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-	require(REP_USERS.'user.inc');
+  require_once("managers/texteManager.php");
+	
+   $chemin="data/user.inc";
 
+  $users=read_file($chemin);
+  
   function find_User_ByIdPw($username, $pw){
 	
 	$trouve = 0;
 	foreach($GLOBALS['users'] as $id => $user){
 		if (($user['password']==$pw)&&($id==$username)){
 			$trouve = $id;
-      echo($trouve);
+     // echo($trouve);
 		}
 	}
 	
@@ -22,10 +26,10 @@
 
 
 //var_dump($_POST);
-if (count($_POST)>0){
+if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 	// c'est un loop back'
-	$utilisateur = find_User_ByIdPw($_POST['username'], $_POST['password']);
-	echo($utilisateur);
+	$utilisateur = find_User_ByIdPw($_POST['login_username'], $_POST['login_password']);
+	//echo($utilisateur);
   if ($utilisateur!='0'){
 		// Il peut se logger
 
@@ -35,8 +39,8 @@ if (count($_POST)>0){
 		
 	}
 	else{
-		// Afficher desolé
-    echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!12345");
+		//Afficher desolé
+    echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!");
 		session_destroy();
 	}
 	header("");	
@@ -57,7 +61,7 @@ if (count($_POST)>0){
 <div class="container">
 	    <header>
 		  <a href="index.php"><img id="logo" src="assets/images/earth2.gif" alt="logo"/></a>
-		  <a href="index.php"><img id="logo1" src="assets/images/logo.png" alt="logo"/></a>
+		  <img id="logo1" src="assets/images/logo.png" alt="logo"/>
 		  <div id='titre'>
 		    <h1 class="hidden">World Pictures</h1>
 		    <h2 class="hidden">Le monde est sous vos yeux</h2>
@@ -83,12 +87,12 @@ if (count($_POST)>0){
                 <fieldset class="textbox">
             	<label class="username">
                 <span>Identifiant</span>
-                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Identifiant">
+                <input id="username" name="login_username" value="" type="text" autocomplete="on" placeholder="Identifiant">
                 </label>
                 
                 <label class="password">
                 <span>Mot de passe</span>
-                <input id="password" name="password" value="" type="password" placeholder="Mot de passe">
+                <input id="password" name="login_password" value="" type="password" placeholder="Mot de passe">
                 </label>
                 
                 <button class="submit button" type="submit">Connexion</button>

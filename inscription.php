@@ -1,6 +1,46 @@
-<?php
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');  
+      require_once("managers/texteManager.php");
+     
 
- ?>
+var_dump($_POST);
+
+if ($_POST['name']!="" && $_POST['prenom']!="" && $_POST['email']!="" && $_POST['password']!="" && $_POST['username']!="" ){
+         //AJOUT
+  // 1.Lecture de tous les users
+  $chemin="data/user.inc";
+
+  $users=read_file($chemin);
+  
+    
+  $name_data= $_POST['name'];
+  $prenom_data= $_POST['prenom'];
+  $email_data= $_POST['email'];
+  $pass_data= $_POST['password'];
+  
+  $user=array(
+        
+								'nom' => "$name_data",
+								'prenom' => "$prenom_data",
+								'email' => "$email_data",
+								'password'=> "$pass_data",
+								'favoris' => array(
+												
+												)
+							
+					); 
+
+
+//ecriture dans le tableau
+  $users[$_POST['username']]=$user;
+  write_file($chemin,$users);
+  
+  echo("ca marche inscription");
+}else if(count($_POST)==0) {
+  
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,7 +72,7 @@
 
     </script>
 	  <?php include("menu.php"); ?>
-        <div id="bloc_contact"> 
+        <div id="bloc_inscription"> 
           <h3><img class="img_titre" src="assets/images/add_user.png">Inscription</h3>
           <form id="formulaire_inscription" action="inscription.php" method="POST">
           <div id="form">
@@ -42,8 +82,8 @@
             <ul>
               <li class="lbl_contact"><label>Nom</label></li>
               <li><input type="text" name="name" id="name" placeholder="Nom..."/></li>
-              <li class="lbl_contact"><label>Pr&eacute;nom</label></li>
-              <li><input type="text" name="prenom" id="prenom" placeholder="Pr&eacute;nom..."/></li>
+              <li class="lbl_contact"><label>Prénom</label></li>
+              <li><input type="text" name="prenom" id="prenom" placeholder="Prénom..."/></li>
               <li class="lbl_contact"><label>Courriel</label></li>
               <li><input type="text" name="email" id="email" placeholder="abc@example.com"/></li>
 			  <li class="lbl_contact"><label>Identifiant</label></li>
@@ -53,8 +93,8 @@
 			  <li class="lbl_contact"><label>Confirmez Mot de passe</label></li>
               <li><input type="password" name="conf_password" id="conf_password" placeholder="Retaper votre mot de passe"/></li>
 			  <li class="lbl_contact"><label></label></li>
-              <li id="reset"><button type="reset" id="btn_reset">Effacer</button></li>
-              <li id="submit"><button id="btn_submit_inscription">Envoyer</button></li>
+              <li id="reset"><button class="btn btn-primary btn-medium  btn btn-info"  type="reset" id="btn_reset">Effacer</button></li>
+              <li id="submit"><button class="btn btn-primary btn-medium  btn btn-info"  id="btn_submit_inscription">Envoyer</button></li>
             </ul>
           </div>
           </form>
