@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');  
       require_once("managers/texteManager.php");
      
@@ -38,6 +39,14 @@ if ($_POST['name']!="" && $_POST['prenom']!="" && $_POST['email']!="" && $_POST[
 }else if(count($_POST)==0) {
   
 }
+=======
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+	    require(REP_USERS.'user.inc');
+      include('data/bdd.inc');
+   
+
+  
+>>>>>>> f26edd95c91cd9a346c8e3fa326f64d1fb80c7fd
 
 ?>
 

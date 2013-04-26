@@ -1,5 +1,10 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+<<<<<<< HEAD
 	    
+=======
+	    require(REP_USERS.'user.inc');
+      include('data/bdd.inc');
+>>>>>>> f26edd95c91cd9a346c8e3fa326f64d1fb80c7fd
       
 if (isset($_GET['remove'])) {
   //echo($_GET['remove']);
