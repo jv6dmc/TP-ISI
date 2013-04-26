@@ -102,7 +102,7 @@
               <li class="lbl_contact"><label>Commentaires</label></li>
               <li><textarea rows="3" cols="40" name="champ_text" id="commentaires"></textarea></li>
               <li class="lbl_contact"></li>
-              <li id="submit"><button id="btn_submit">Envoyer</button></li>
+              <li id="submit"><button class="btn btn-primary btn-medium  btn btn-info" id="btn_submit">Envoyer</button></li>
             </ul>
           </div>
           </form>

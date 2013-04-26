@@ -10,6 +10,17 @@ $users = array(
                         'prod03',
                         'prod04'
 												)
+						    ),
+          'briou' =>array(
+								'nom' => "Riou",
+								'prenom' => "Brice",
+								'email' => 'briou69@gmail.ca',
+								'password'=> '4321',
+								'favoris' => array(
+												'prod01',
+                        'prod03',
+                        'prod04'
+												)
 							)
 					); 
 ?>
