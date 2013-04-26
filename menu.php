@@ -73,7 +73,7 @@ if (count($_POST)>0){
         Bienvenue nom
       </p>-->
         <ul id="connexion">
-          <li class="connexion"><a>S'inscrire</a></li>
+          <li class="connexion"><a href="inscription.php">S'inscrire</a></li>
           <li class="connexion">|</li>
           <li class="connexion "><a href="#login-box" class="login-window">Connexion</a></li>
         </ul>
@@ -94,7 +94,7 @@ if (count($_POST)>0){
                 <button class="submit button" type="submit">Connexion</button>
                 
                 <p>
-                <a class="forgot" href="index.php">S'inscrire</a>
+                <a class="forgot" href="inscription.php">S'inscrire</a>
                 </p>
                 
                 </fieldset>

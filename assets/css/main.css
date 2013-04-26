@@ -569,3 +569,26 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
   margin-left:750px;
   margin-top:20px;
 }
+
+/*inscription*/
+
+.intro {
+	text-align:center;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+#reset  {
+  float: left;
+}
+
+#form #submit {
+  margin-left: 90px;
+}
+
+.img_titre {
+	width: 40px;
+	height: :40px;
+	margin:20px;
+	margin-bottom: 20px;
+}
