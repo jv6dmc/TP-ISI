@@ -1,8 +1,19 @@
 <?php
- session_start();
 	
-
-	
+  if (!isset($_GET['deconnection'])) {
+      session_start();
+      if (isset($_SESSION["ID"])) {
+        $trouver=true;
+      } else {
+        $trouver=false;
+      }
+  } else {
+    $trouver=false;
+    session_start();
+    session_destroy();
+    header('location: index.php');
+  }
+  
 	require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
   require_once("managers/texteManager.php");
 	
@@ -10,24 +21,11 @@
   $currentFile = $_SERVER["PHP_SELF"];
   $parts = Explode('/', $currentFile);
   //echo $parts[count($parts) - 1];
-  if ($parts[count($parts) - 1]!="details_produit.php") {  
+  if ($parts[count($parts) - 1]=="details_produit.php") {
+  } else if ($parts[count($parts) - 1]=="inscription.php") {  
+  } else {
     $users=read_file($chemin);
   }
-  function find_User_ByIdPw($username, $pw){
-	
-	$trouve = 0;
-	foreach($GLOBALS['users'] as $id => $user){
-		if (($user['password']==$pw)&&($id==$username)){
-			$trouve = $id;
-     // echo($trouve);
-		}
-	}
-	
-	return $trouve;
-	
-}
-
-
 //var_dump($_POST);
 if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 	// c'est un loop back'
@@ -36,28 +34,20 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
   if ($utilisateur!='0'){
 		// Il peut se logger
 
-		echo('Bienvenue');
-		$_SESSION[UTILISATEUR] = $utilisateur;		
-		//$chemin = REP_ETUDIANTS.'detail.php';		
+		//echo('Bienvenue');
+    $_SESSION['ID'] = $utilisateur;		
+		$trouver=true;
 		
 	}
 	else{
 		//Afficher desolé
-    echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!");
-		session_destroy();
+    //echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!");
+    $trouver=false;
 	}
 	header("");	
 }
 
 	//var_dump($_SESSION);
-
-
-
-
-
-
-
-
 
 ?>
 
@@ -75,18 +65,32 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 			Montréal, QC H3V 5F6<br>
 			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
 			<a href="mailto:#">worldpictures@gmail.com</a>
-		  </address>
-      <!--<p id="msg_welcome">
-        Bienvenue nom
-      </p>-->
-        <ul id="connexion">
-          <li class="connexion"><a href="inscription.php">S'inscrire</a></li>
-          <li class="connexion">|</li>
-          <li class="connexion "><a href="#login-box" class="login-window">Connexion</a></li>
-        </ul>
+		  </address>  
+        <?php if ($trouver==TRUE) { ?>
+          <ul id="msg_welcome">
+            <li>Bienvenue <?php echo($_SESSION["ID"]);?></li>
+          </ul>
+          <ul id="deconnexion">
+            <li class="connexion"><a href="favoris.php">Mes favoris</a></li>
+            <li class="connexion">|</li>
+            <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
+          </ul>
+        <?php } else { ?>
+          <ul id="connexion">
+            <li class="connexion"><a href="inscription.php">S'inscrire</a></li>
+            <li class="connexion">|</li>
+            <li class="connexion "><a href="#login-box" class="login-window">Connexion</a></li>
+          </ul>      
+          <?php } ?> 
         <div id="login-box" class="login-popup">
         <a href="#" class="close"><img src="assets/images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-          <form method="post" class="signin" action="index.php">
+          <form method="post" class="signin" action="<?php 
+          if($parts[count($parts) - 1]!="inscription.php") {
+            echo($_SERVER["PHP_SELF"]);
+          } else {
+            echo("index.php");
+          }
+          ?>">
                 <fieldset class="textbox">
             	<label class="username">
                 <span>Identifiant</span>
@@ -97,9 +101,7 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
                 <span>Mot de passe</span>
                 <input id="password" name="login_password" value="" type="password" placeholder="Mot de passe">
                 </label>
-                
                 <button class="submit button" type="submit">Connexion</button>
-                
                 <p>
                 <a class="forgot" href="inscription.php">S'inscrire</a>
                 </p>

@@ -2,43 +2,44 @@
       require_once("managers/texteManager.php");
      
 
-var_dump($_POST);
-
-if ($_POST['name']!="" && $_POST['prenom']!="" && $_POST['email']!="" && $_POST['password']!="" && $_POST['username']!=""){
-         //AJOUT
-  // 1.Lecture de tous les users
-  $chemin="data/user.inc";
-
-  $users=read_file($chemin);
+if (count($_POST)>0){
   
+
+  if ($_POST['name']!="" && $_POST['prenom']!="" && $_POST['email']!="" && $_POST['password']!="" && $_POST['username']!=""){
+           //AJOUT
+    // 1.Lecture de tous les users
+    $chemin="data/user.inc";
+
+    $users=read_file($chemin);
     
-  $name_data= $_POST['name'];
-  $prenom_data= $_POST['prenom'];
-  $email_data= $_POST['email'];
-  $pass_data= $_POST['password'];
-  
-  $user=array(
-        
-								'nom' => "$name_data",
-								'prenom' => "$prenom_data",
-								'email' => "$email_data",
-								'password'=> "$pass_data",
-								'favoris' => array(
-												
-												)
-							
-					); 
+      
+    $name_data= $_POST['name'];
+    $prenom_data= $_POST['prenom'];
+    $email_data= $_POST['email'];
+    $pass_data= $_POST['password'];
+    
+    $user=array(
+          
+  								'nom' => "$name_data",
+  								'prenom' => "$prenom_data",
+  								'email' => "$email_data",
+  								'password'=> "$pass_data",
+  								'favoris' => array(
+  												
+  												)
+  							
+  					); 
 
 
-//ecriture dans le tableau
-  $users[$_POST['username']]=$user;
-  write_file($chemin,$users);
-  
-  echo("ca marche inscription");
-}else if(count($_POST)==0) {
-  
+  //ecriture dans le tableau
+    $users[$_POST['username']]=$user;
+    write_file($chemin,$users);
+    
+    echo("ca marche inscription");
+  }else if(count($_POST)==0) {
+    
 }
-
+}
 ?>
 
 <!DOCTYPE html>

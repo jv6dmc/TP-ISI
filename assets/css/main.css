@@ -55,6 +55,19 @@ header {
   margin-top: 25px;
   margin-left:810px;
 }
+#deconnexion {
+  margin-top: 25px;
+  margin-left:780px;
+}
+
+#msg_welcome {
+  position:absolute;
+  top: 148px;
+  left:355px;
+}
+#msg_welcome>li {
+  font-size:18px;
+}
 
 header>address {
   float:right;

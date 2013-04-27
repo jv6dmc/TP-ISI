@@ -1,4 +1,24 @@
-<?php include('data/bdd.inc');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+      require_once("managers/texteManager.php");
+      include('data/bdd.inc');
+      
+      // 1.Lecture de tous les users
+      $chemin="data/user.inc";
+      $users=read_file($chemin);
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,25 +60,23 @@
 </tr>
 </thead>
 <tbody>
+
+<?php foreach($users as $id=>$user){ ?>
 <tr>
-<td rowspan="2">1</td>
-<td>Mark</td>
-<td>Otto</td>
+<td rowspan="<?php echo(count($users[$id]['favoris'])); ?>"><?php echo($id);?></td>
+<td><?php echo($users[$id]['favoris'][1]);?></td>
+<td><?php echo($produits[$users[$id]['favoris'][1]]['titre']);?></td>
 </tr>
+<?php foreach($users[$id]['favoris'] as $num=>$favoris) {
+  if (isset($users[$id]['favoris'][$num+1])){
+  ?>
 <tr>
-<td>Mark</td>
-<td>Otto</td>
+<td><?php echo($users[$id]['favoris'][$num+1]);?></td>
+<td><?php echo($produits[$users[$id]['favoris'][$num+1]]['titre']);?></td>
 </tr>
-<tr>
-<td>2</td>
-<td>Jacob</td>
-<td>Thornton</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
+
+<?php }}} ?>
+
 </tbody>
 </table>
 <h4>Utilisateurs enregistrés</h4>
@@ -78,6 +96,7 @@
 <td>Otto</td>
 <td>email@example.com</td>
 </tr>
+<tr>
 <td>2</td>
 <td>Jacob</td>
 <td>Thornton</td>

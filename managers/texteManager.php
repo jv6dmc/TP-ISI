@@ -33,4 +33,18 @@ function save_file($chemin, $contenu_du_fichier) {
   fclose($fichier);
 }
 
+function find_User_ByIdPw($username, $pw){
+	
+	$trouve = 0;
+	foreach($GLOBALS['users'] as $id => $user){
+		if (($user['password']==$pw)&&($id==$username)){
+			$trouve = $id;
+     // echo($trouve);
+		}
+	}
+	
+	return $trouve;
+	
+}
+
 ?>
