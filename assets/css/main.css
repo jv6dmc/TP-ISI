@@ -603,3 +603,20 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
   float:left;
   margin-left:70px;
 }
+
+/*----gestion_favoris.php----*/
+#bloc_gestion_favoris {
+  background-color:#eee;
+    margin-top:0px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border-radius: 6px;
+    padding: 3px 7px;
+}
+
+#bloc_gestion_favoris>table, #bloc_gestion_favoris>table tr th, #bloc_gestion_favoris>table tr td{
+  border-color:black;
+}
+#bloc_gestion_favoris>table {
+  background-color:#D6D6D6;
+}
