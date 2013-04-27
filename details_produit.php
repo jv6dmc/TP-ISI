@@ -3,21 +3,30 @@
       include('data/bdd.inc');
       $id_produit = $_GET['id'];
       
+      // 1.Lecture de tous les users
+      $chemin="data/user.inc";
+      $users=read_file($chemin);
       
-      if (isset($_GET['add'])){
+      
+      $trouve = 0;
+	    foreach($users['br']['favoris'] as $favoris){
+        if ($favoris==$id_produit){
+			    $trouve = true;
+          // echo($trouve);
+		    }
+	    }
+      
+      if (isset($_GET['add']) && $trouve==0){
+            $trouve=true;
             //AJOUT
-  // 1.Lecture de tous les users
-  $chemin="data/user.inc";
-
-  $users=read_file($chemin);
   
   //ecriture dans le tableau
   $size_favoris = count($users['br']['favoris'])+1;
-  echo($size_favoris);
+  //echo($size_favoris);
   $users['br']['favoris'][$size_favoris] = $_GET['add'];
   
   write_file($chemin,$users);
-  var_dump($users);
+  //var_dump($users);
       }
 ?>
 <!DOCTYPE html>
@@ -28,7 +37,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<meta name="description" content="Blog Photographe amateur" />
 		<meta name="author" content="Brice Riou - Nicolas McClure" />
-		<title>World-Pictures- Home</title>
+		<title>World-Pictures - Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />	
 		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -53,7 +62,16 @@
          <h3><?php echo($produits[$id_produit]['titre']);?></h3>
         <img src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
         <ul>
-          <li><a href="details_produit.php?id=<?php echo($_GET['id']);?>&add=<?php echo($_GET['id']);?>" class="btn btn-success btn-mini" data-original-title="" title="">Ajouter aux favoris</a></li>
+          <?php if ($trouve==TRUE) { ?>
+            <li><a class="btn btn-success btn-mini" data-original-title="" title="" disabled>Déjà dans vos favoris</a></li>
+          <?php } else { ?>
+            <li><a href="details_produit.php?id=<?php echo($_GET['id']);?>&add=<?php echo($_GET['id']);?>" class="btn btn-success btn-mini" data-original-title="" title="">Ajouter aux favoris</a></li>
+          <?php } ?>
+          
+          
+          
+          
+          <!--<li><a href="details_produit.php?id=<?php echo($_GET['id']);?>&add=<?php echo($_GET['id']);?>" class="btn btn-success btn-mini" data-original-title="" title=""?>Ajouter aux favoris</a></li>-->
         </ul>
         <div class="clearfix"></div>
         <h4>Caractéristiques</h4>
@@ -63,7 +81,7 @@
         </ul>
         <h4>Description</h4>
         <p><?php echo($produits[$id_produit]['description']);?></p>
-		<a id="back_button" href="produits.php" class="btn btn-primary btn-medium btn btn-info">Retour Liste</a>
+		      <a id="back_button" href="produits.php" class="btn btn-primary btn-medium btn btn-info">Retour Liste</a>
 		    </div>
 		<?php include("footer.php"); ?>
 	  <script src="http://code.jquery.com/jquery.js"></script>
