@@ -7,9 +7,12 @@
   require_once("managers/texteManager.php");
 	
    $chemin="data/user.inc";
-
-  $users=read_file($chemin);
-  
+  $currentFile = $_SERVER["PHP_SELF"];
+  $parts = Explode('/', $currentFile);
+  //echo $parts[count($parts) - 1];
+  if ($parts[count($parts) - 1]!="details_produit.php") {  
+    $users=read_file($chemin);
+  }
   function find_User_ByIdPw($username, $pw){
 	
 	$trouve = 0;

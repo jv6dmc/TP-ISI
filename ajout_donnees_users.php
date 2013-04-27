@@ -5,8 +5,8 @@
   $chemin="data/user.inc";
 
   $users=read_file($chemin);
-  
-  
+  var_dump($users);
+  /*
   $favoris=array(
 							'prod01',
               'prod03',
@@ -18,5 +18,5 @@
   $users['jv6dmc']['favoris']=$favoris;
   write_file($chemin,$users);
   
-  echo("modifications réussis!");
+  echo("modifications réussis!");*/
 ?>

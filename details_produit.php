@@ -1,5 +1,24 @@
-<?php include("script.php");
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+      require_once("managers/texteManager.php");
+      include('data/bdd.inc');
       $id_produit = $_GET['id'];
+      
+      
+      if (isset($_GET['add'])){
+            //AJOUT
+  // 1.Lecture de tous les users
+  $chemin="data/user.inc";
+
+  $users=read_file($chemin);
+  
+  //ecriture dans le tableau
+  $size_favoris = count($users['br']['favoris'])+1;
+  echo($size_favoris);
+  $users['br']['favoris'][$size_favoris] = $_GET['add'];
+  
+  write_file($chemin,$users);
+  var_dump($users);
+      }
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +52,10 @@
         <div id="bloc_details_produit">
          <h3><?php echo($produits[$id_produit]['titre']);?></h3>
         <img src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
+        <ul>
+          <li><a href="details_produit.php?id=<?php echo($_GET['id']);?>&add=<?php echo($_GET['id']);?>" class="btn btn-success btn-mini" data-original-title="" title="">Ajouter aux favoris</a></li>
+        </ul>
+        <div class="clearfix"></div>
         <h4>Caractéristiques</h4>
         <ul>
           <li><strong>Prix</strong> : <?php echo($produits[$id_produit]['prix']);?>$</li>

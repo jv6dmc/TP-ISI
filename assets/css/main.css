@@ -403,18 +403,22 @@ a.thumbnail {
 /*-----details_produit.php----*/
 #bloc_details_produit{
   background-color:#eee;
-    margin-top:0px;
+    margin-top:-25px;
     -moz-border-radius: 6px;
     border-radius: 6px;
     border-radius: 6px;
 }
 
+#bloc_details_produit>h3 {
+  padding-top:40px;
+}
 
 #bloc_details_produit>img {
 	width:500px;
 	height: :400px;
 	margin-left:200px;
-	margin-right:200px;
+	margin-right:50px;
+  float:left;
 }
 
 #bloc_details_produit>p {

@@ -1,22 +1,21 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-<<<<<<< HEAD
-	    
-=======
-	    require(REP_USERS.'user.inc');
+      require_once("managers/texteManager.php");
       include('data/bdd.inc');
->>>>>>> f26edd95c91cd9a346c8e3fa326f64d1fb80c7fd
-      
+
+$chemin="data/user.inc";
+$users=read_file($chemin);
+
 if (isset($_GET['remove'])) {
   //echo($_GET['remove']);
   $current_id = $_GET['remove'];
-  foreach($users['jv6dmc']['favoris'] as $id=>$id_produit) {
+  foreach($users['br']['favoris'] as $id=>$id_produit) {
     if ($id_produit == $current_id) {
-       unset($users['jv6dmc']['favoris'][$id]);
-       echo($id);
+       unset($users['br']['favoris'][$id]);
+       //echo($id);
     }
   }
+   write_file($chemin,$users);
 }      
-     var_dump($users); 
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +49,7 @@ if (isset($_GET['remove'])) {
 	  <?php include("menu.php"); ?>
     <div id="bloc_favoris">
       <h3>Mes favoris</h3>
-      <?php foreach($users['jv6dmc']['favoris'] as $id_produit) {?>
+      <?php foreach($users['br']['favoris'] as $id_produit) {?>
         <ul>
           <li><a href="favoris.php?remove=<?php echo($id_produit);?>" class="btn btn-danger btn-mini remove_favoris" data-original-title="" title="">Retirer des favoris</a></li>
         </ul>
