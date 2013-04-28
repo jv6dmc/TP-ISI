@@ -59,7 +59,10 @@ header {
   margin-top: 25px;
   margin-left:780px;
 }
-
+#deconnexion_admin {
+  margin-top: 25px;
+  margin-left:690px;
+}
 #msg_welcome {
   position:absolute;
   top: 148px;

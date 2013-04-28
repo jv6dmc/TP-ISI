@@ -5,12 +5,18 @@
       // 1.Lecture de tous les users
       $chemin="data/user.inc";
       $users=read_file($chemin);
+      
+      foreach($users as $id=>$user){
+        
+        $i=0;
+        foreach($users[$id]['favoris'] as $num=>$favoris) {
+          $array_favoris[$id][$i] = $favoris;
+          $i++;
+        }
+      }
+   // var_dump($array_favoris);
 
-
-
-
-
-
+  // var_dump($users);
 
 
 
@@ -61,21 +67,22 @@
 </thead>
 <tbody>
 
-<?php foreach($users as $id=>$user){ ?>
+<?php foreach($array_favoris as $id=>$user) {
+if (isset($array_favoris[$id])){ ?>
 <tr>
-<td rowspan="<?php echo(count($users[$id]['favoris'])); ?>"><?php echo($id);?></td>
-<td><?php echo($users[$id]['favoris'][1]);?></td>
-<td><?php echo($produits[$users[$id]['favoris'][1]]['titre']);?></td>
+<td rowspan="<?php echo(count($array_favoris[$id])); ?>"><?php echo($id);?></td>
+<td><?php echo($array_favoris[$id][0]);?></td>
+<td><?php echo($produits[$array_favoris[$id][0]]['titre']);?></td>
 </tr>
-<?php foreach($users[$id]['favoris'] as $num=>$favoris) {
-  if (isset($users[$id]['favoris'][$num+1])){
+<?php foreach($array_favoris[$id] as $num=>$favoris) {
+  if (isset($array_favoris[$id][$num+1])){
   ?>
 <tr>
-<td><?php echo($users[$id]['favoris'][$num+1]);?></td>
-<td><?php echo($produits[$users[$id]['favoris'][$num+1]]['titre']);?></td>
+<td><?php echo($array_favoris[$id][$num+1]);?></td>
+<td><?php echo($produits[$array_favoris[$id][$num+1]]['titre']);?></td>
 </tr>
 
-<?php }}} ?>
+<?php }}}} ?>
 
 </tbody>
 </table>
@@ -90,24 +97,15 @@
 </tr>
 </thead>
 <tbody>
+
+<?php foreach($users as $id=>$user){?>
 <tr>
-<td>1</td>
-<td>Mark</td>
-<td>Otto</td>
-<td>email@example.com</td>
+<td><?php echo($id);?></td>
+<td><?php echo($users[$id]['nom']);?></td>
+<td><?php echo($users[$id]['prenom']);?></td>
+<td><?php echo($users[$id]['email']);?></td>
 </tr>
-<tr>
-<td>2</td>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>email@example.com</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Larry the Bird</td>
-<td>@twitter</td>
-<td>email@example.com</td>
-</tr>
+<?php } ?>
 </tbody>
 </table>
     </div>

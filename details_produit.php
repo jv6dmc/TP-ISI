@@ -1,15 +1,19 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
       require_once("managers/texteManager.php");
       include('data/bdd.inc');
-      $id_produit = $_GET['id'];
+        $id_produit = $_GET['id'];
+      session_start();
+      $trouve=0;
+      //var_dump($_SESSION);
+   if (isset($_SESSION["ID"])) {
+      $user_logged = $_SESSION["ID"];
       
       // 1.Lecture de tous les users
       $chemin="data/user.inc";
       $users=read_file($chemin);
       
-      
-      $trouve = 0;
-	    foreach($users['br']['favoris'] as $favoris){
+      $trouve=0;
+	    foreach($users[$user_logged]['favoris'] as $favoris){
         if ($favoris==$id_produit){
 			    $trouve = true;
           // echo($trouve);
@@ -21,13 +25,15 @@
             //AJOUT
   
   //ecriture dans le tableau
-  $size_favoris = count($users['br']['favoris'])+1;
+  //$size_favoris = count($users[$user_logged]['favoris'])+1;
+  $size_favoris = intval(substr($_GET['add'], 4, 2));
   //echo($size_favoris);
-  $users['br']['favoris'][$size_favoris] = $_GET['add'];
+  $users[$user_logged]['favoris'][$size_favoris] = $_GET['add'];
   
   write_file($chemin,$users);
   //var_dump($users);
       }
+   }
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,11 +68,12 @@
          <h3><?php echo($produits[$id_produit]['titre']);?></h3>
         <img src="<?php echo($produits[$id_produit]['image']);?>" alt=""/>
         <ul>
-          <?php if ($trouve==TRUE) { ?>
+          <?php if (isset($_SESSION["ID"])) {
+                   if ($trouve==TRUE) { ?>
             <li><a class="btn btn-success btn-mini" data-original-title="" title="" disabled>Déjà dans vos favoris</a></li>
           <?php } else { ?>
             <li><a href="details_produit.php?id=<?php echo($_GET['id']);?>&add=<?php echo($_GET['id']);?>" class="btn btn-success btn-mini" data-original-title="" title="">Ajouter aux favoris</a></li>
-          <?php } ?>
+          <?php }} ?>
           
           
           

@@ -8,6 +8,14 @@
   var_dump($users);
   
   
+  print '<script type="text/javascript">';
+  print 'alert("Identifiant ou mot de passe invalide !")';
+  print '</script>';  
+  
+  
+  
+  
+  
   
   $ou = true;
   $ou2 = true;
@@ -63,6 +71,7 @@
     </head>
     <body>
 <?php include("menu.php");
+session_start();
 echo($_SESSION["ID"]);
 
 

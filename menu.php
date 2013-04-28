@@ -1,7 +1,10 @@
 <?php
-	
+  //echo($_SERVER["PHP_SELF"]);
   if (!isset($_GET['deconnection'])) {
-      session_start();
+      if (!isset($_SESSION)) {
+        session_start();
+      }
+      
       if (isset($_SESSION["ID"])) {
         $trouver=true;
       } else {
@@ -9,7 +12,9 @@
       }
   } else {
     $trouver=false;
-    session_start();
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     session_destroy();
     header('location: index.php');
   }
@@ -21,10 +26,10 @@
   $currentFile = $_SERVER["PHP_SELF"];
   $parts = Explode('/', $currentFile);
   //echo $parts[count($parts) - 1];
-  if ($parts[count($parts) - 1]=="details_produit.php") {
-  } else if ($parts[count($parts) - 1]=="inscription.php") {  
+  if ($parts[count($parts) - 1]=="inscription.php") {
+  } else if (isset($_GET['add'])){
   } else {
-    $users=read_file($chemin);
+      $users=read_file($chemin);
   }
 //var_dump($_POST);
 if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
@@ -37,6 +42,11 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 		//echo('Bienvenue');
     $_SESSION['ID'] = $utilisateur;		
 		$trouver=true;
+    if ($parts[count($parts) - 1]=="details_produit.php") {
+          if (!isset($_GET['reload'])) { ?>
+          <meta http-equiv=Refresh content="0;url=<?php echo($_SERVER["PHP_SELF"]);?>?reload=1&id=<?php echo($_GET['id']);?>">';
+          <?php }
+    }
 		
 	}
 	else{
@@ -70,11 +80,22 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
           <ul id="msg_welcome">
             <li>Bienvenue <?php echo($_SESSION["ID"]);?></li>
           </ul>
+          <?php if ($_SESSION["ID"]=="admin") { ?>
+          <ul id="deconnexion_admin">
+            <li class="connexion"><a href="gestion_favoris.php">Section admin</a></li>
+            <li class="connexion">|</li>
+            <li class="connexion"><a href="favoris.php">Mes favoris</a></li>
+            <li class="connexion">|</li>
+            <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
+          </ul>
+          <?php } else { ?>
+          
           <ul id="deconnexion">
             <li class="connexion"><a href="favoris.php">Mes favoris</a></li>
             <li class="connexion">|</li>
             <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
           </ul>
+          <?php } ?>
         <?php } else { ?>
           <ul id="connexion">
             <li class="connexion"><a href="inscription.php">S'inscrire</a></li>
@@ -85,8 +106,11 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
         <div id="login-box" class="login-popup">
         <a href="#" class="close"><img src="assets/images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
           <form method="post" class="signin" action="<?php 
-          if($parts[count($parts) - 1]!="inscription.php") {
-            echo($_SERVER["PHP_SELF"]);
+          if ($parts[count($parts) - 1]=="details_produit.php") {
+            $details_id = $_GET['id'];
+            echo("details_produit.php?id=$details_id");
+          } else if($parts[count($parts) - 1]!="inscription.php") {
+            echo($_SERVER["PHP_SELF"]); 
           } else {
             echo("index.php");
           }

@@ -2,15 +2,21 @@
       require_once("managers/texteManager.php");
       include('data/bdd.inc');
 
+session_start();
+//var_dump($_SESSION);
+
 $chemin="data/user.inc";
 $users=read_file($chemin);
+
+$user_logged = $_SESSION["ID"];
+
 
 if (isset($_GET['remove'])) {
   //echo($_GET['remove']);
   $current_id = $_GET['remove'];
-  foreach($users['br']['favoris'] as $id=>$id_produit) {
+  foreach($users[$user_logged]['favoris'] as $id=>$id_produit) {
     if ($id_produit == $current_id) {
-       unset($users['br']['favoris'][$id]);
+       unset($users[$user_logged]['favoris'][$id]);
        //echo($id);
     }
   }
@@ -49,7 +55,7 @@ if (isset($_GET['remove'])) {
 	  <?php include("menu.php"); ?>
     <div id="bloc_favoris">
       <h3>Mes favoris</h3>
-      <?php foreach($users['br']['favoris'] as $id_produit) {?>
+      <?php foreach($users[$user_logged]['favoris'] as $id_produit) {?>
         <ul>
           <li><a href="favoris.php?remove=<?php echo($id_produit);?>" class="btn btn-danger btn-mini remove_favoris" data-original-title="" title="">Retirer des favoris</a></li>
         </ul>
