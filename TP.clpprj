@@ -2,10 +2,10 @@
 <project name="C:\wamp\www\TP\TP.clpprj">
 	<removed value=";"/><added value=""/><errors version="4.5">
 		<errfile name="C:\wamp\www\TP\assets\css\main.css">
-			<error val="4;88;40;88;2502;1;"/>
-			<error val="4;87;37;87;2502;1;"/>
-			<error val="4;127;37;127;2502;1;"/>
-			<error val="4;128;38;128;2502;1;"/>
+			<error val="4;104;40;104;2502;1;"/>
+			<error val="4;103;37;103;2502;1;"/>
+			<error val="4;143;37;143;2502;1;"/>
+			<error val="4;144;38;144;2502;1;"/>
 		</errfile>
 		<errfile name="C:\wamp\www\TP\assets\css\bootstrap.min.css">
 			<error val="590;8;616;8;2502;1;"/>
@@ -29,16 +29,19 @@
 			<error val="96370;8;96423;8;2502;1;"/>
 			<error val="96423;8;96473;8;2502;1;"/>
 		</errfile>
+		<errfile name="C:\wamp\www\TP\details_produit.php">
+			<error val="83;72;92;72;2002;1;"/>
+		</errfile>
 	</errors>
 	<codestructure version="4.4">
 		<phptree>
-			<treenode node="data/bdd.inc;PHP:PHP Include;C:\wamp\www\TP\produits.php;f15;0;27;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="data/bdd.inc;PHP:PHP Include;C:\wamp\www\TP\favoris.php;f15;2;27;2;;C:\wamp\www\TP\produits.php;f15;0;27;0;;C:\wamp\www\TP\details_produit.php;f15;2;27;2;;C:\wamp\www\TP\gestion_favoris.php;f15;2;27;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="footer.php;PHP:PHP Include;C:\wamp\www\TP\sample.php;f17;32;27;32;;C:\wamp\www\TP\produits.php;f17;44;27;44;;C:\wamp\www\TP\galerie.php;f17;158;27;158;;C:\wamp\www\TP\details_produit.php;f17;44;27;44;;C:\wamp\www\TP\contact.php;f17;120;27;120;;C:\wamp\www\TP\confirmation.php;f17;26;27;26;;C:\wamp\www\TP\index.php;f17;114;27;114;;C:\wamp\www\TP\inscription.php;f17;101;27;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="footer.php;PHP:PHP Include;C:\wamp\www\TP\sample.php;f17;32;27;32;;C:\wamp\www\TP\galerie.php;f17;158;27;158;;C:\wamp\www\TP\contact.php;f17;120;27;120;;C:\wamp\www\TP\index.php;f17;114;27;114;;C:\wamp\www\TP\favoris.php;f17;73;27;73;;C:\wamp\www\TP\produits.php;f17;44;27;44;;C:\wamp\www\TP\details_produit.php;f17;92;27;92;;C:\wamp\www\TP\gestion_favoris.php;f17;111;27;111;;C:\wamp\www\TP\confirmation.php;f17;26;27;26;;C:\wamp\www\TP\confirmation_inscription.php;f17;26;27;26;;C:\wamp\www\TP\inscription.php;f17;102;27;102;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="managers/texteManager.php;PHP:PHP Include;C:\wamp\www\TP\menu.php;f16;6;41;6;;C:\wamp\www\TP\inscription.php;f20;1;45;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="managers/texteManager.php;PHP:PHP Include;C:\wamp\www\TP\ajout_données_users.php;f20;1;45;1;;C:\wamp\www\TP\favoris.php;f20;1;45;1;;C:\wamp\www\TP\ajout_donnees_users.php;f20;1;45;1;;C:\wamp\www\TP\details_produit.php;f20;1;45;1;;C:\wamp\www\TP\gestion_favoris.php;f20;1;45;1;;C:\wamp\www\TP\inscription.php;f20;1;45;1;;C:\wamp\www\TP\menu.php;f16;22;41;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="menu.php;PHP:PHP Include;C:\wamp\www\TP\sample.php;f18;29;26;29;;C:\wamp\www\TP\produits.php;f18;29;26;29;;C:\wamp\www\TP\galerie.php;f18;33;26;33;;C:\wamp\www\TP\details_produit.php;f18;31;26;31;;C:\wamp\www\TP\contact.php;f18;31;26;31;;C:\wamp\www\TP\confirmation.php;f18;18;26;18;;C:\wamp\www\TP\index.php;f22;31;30;31;;C:\wamp\www\TP\inscription.php;f18;73;26;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="menu.php;PHP:PHP Include;C:\wamp\www\TP\sample.php;f18;29;26;29;;C:\wamp\www\TP\galerie.php;f18;33;26;33;;C:\wamp\www\TP\contact.php;f18;31;26;31;;C:\wamp\www\TP\ajout_données_users.php;f15;72;23;72;;C:\wamp\www\TP\index.php;f22;31;30;31;;C:\wamp\www\TP\favoris.php;f18;54;26;54;;C:\wamp\www\TP\ajout_donnees_users.php;f15;72;23;72;;C:\wamp\www\TP\produits.php;f18;29;26;29;;C:\wamp\www\TP\details_produit.php;f18;65;26;65;;C:\wamp\www\TP\gestion_favoris.php;f18;55;26;55;;C:\wamp\www\TP\confirmation.php;f18;18;26;18;;C:\wamp\www\TP\confirmation_inscription.php;f18;18;26;18;;C:\wamp\www\TP\inscription.php;f18;74;26;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="PROJET;PHP:PHP Word;C:\wamp\www\TP\initialisation.inc;f8;1;14;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -46,22 +49,20 @@
 			</treenode>
 			<treenode node="ROOT;PHP:PHP Word;C:\wamp\www\TP\initialisation.inc;f8;2;12;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="script.php;PHP:PHP Include;C:\wamp\www\TP\details_produit.php;f15;0;25;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-			</treenode>
 			<treenode node="UTILISATEUR;PHP:PHP Word;C:\wamp\www\TP\initialisation.inc;f8;15;19;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="find_User_ByIdPw;PHP:Function Name;C:\wamp\www\TP\menu.php;f2;12;1;24;;;;vpos;;v;;r;;d43,12;;b0,0;;musername;;ppw;;p">
-				<treenode node="GLOBALS;PHP:Var Name;C:\wamp\www\TP\menu.php;f9;15;17;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="find_User_ByIdPw;PHP:Function Name;C:\wamp\www\TP\managers\texteManager.php;f0;35;1;47;;;;vpos;;v;;r;;d41,35;;b0,0;;musername;;ppw;;p">
+				<treenode node="GLOBALS;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f9;38;17;38;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="id;PHP:Var Name;C:\wamp\www\TP\menu.php;f30;15;33;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="id;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f30;38;33;38;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="pw;PHP:Var Name;C:\wamp\www\TP\menu.php;f39;12;42;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="pw;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f37;35;40;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="trouve;PHP:Var Name;C:\wamp\www\TP\menu.php;f1;14;8;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="trouve;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f1;37;8;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="user;PHP:Var Name;C:\wamp\www\TP\menu.php;f37;15;42;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="user;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f37;38;42;38;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="username;PHP:Var Name;C:\wamp\www\TP\menu.php;f28;12;37;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="username;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f26;35;35;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="open_file;PHP:Function Name;C:\wamp\www\TP\managers\texteManager.php;f0;2;1;8;;;;vpos;;v;;r;;d27,2;;b0,0;;mchemin;;p">
@@ -100,47 +101,79 @@
 				<treenode node="users;PHP:Var Name;C:\wamp\www\TP\managers\texteManager.php;f28;22;34;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="_GET;PHP:Var Name;C:\wamp\www\TP\details_produit.php;f20;1;25;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_GET;PHP:Var Name;C:\wamp\www\TP\ajout_données_users.php;f51;53;56;53;;C:\wamp\www\TP\favoris.php;f10;13;15;13;;C:\wamp\www\TP\ajout_donnees_users.php;f51;53;56;53;;C:\wamp\www\TP\details_produit.php;f22;3;27;3;;C:\wamp\www\TP\menu.php;f13;2;18;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_POST;PHP:Var Name;C:\wamp\www\TP\menu.php;f10;28;16;28;;C:\wamp\www\TP\inscription.php;f9;4;15;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_POST;PHP:Var Name;C:\wamp\www\TP\inscription.php;f10;4;16;4;;C:\wamp\www\TP\menu.php;f10;34;16;34;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_SERVER;PHP:Var Name;C:\wamp\www\TP\initialisation.inc;f15;2;23;2;;C:\wamp\www\TP\favoris.php;f19;0;27;0;;C:\wamp\www\TP\menu.php;f14;5;22;5;;C:\wamp\www\TP\inscription.php;f19;0;27;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_SERVER;PHP:Var Name;C:\wamp\www\TP\Codelobster0.php;f10;3;18;3;;C:\wamp\www\TP\ajout_données_users.php;f19;0;27;0;;C:\wamp\www\TP\favoris.php;f19;0;27;0;;C:\wamp\www\TP\ajout_donnees_users.php;f19;0;27;0;;C:\wamp\www\TP\details_produit.php;f19;0;27;0;;C:\wamp\www\TP\gestion_favoris.php;f19;0;27;0;;C:\wamp\www\TP\initialisation.inc;f15;2;23;2;;C:\wamp\www\TP\inscription.php;f19;0;27;0;;C:\wamp\www\TP\menu.php;f14;21;22;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_SESSION;PHP:Var Name;C:\wamp\www\TP\menu.php;f2;36;11;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_SESSION;PHP:Var Name;C:\wamp\www\TP\ajout_données_users.php;f5;74;14;74;;C:\wamp\www\TP\favoris.php;f15;10;24;10;;C:\wamp\www\TP\ajout_donnees_users.php;f5;74;14;74;;C:\wamp\www\TP\details_produit.php;f13;7;22;7;;C:\wamp\www\TP\menu.php;f17;3;26;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="chemin;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f0;20;7;20;;C:\wamp\www\TP\menu.php;f3;8;10;8;;C:\wamp\www\TP\inscription.php;f2;9;9;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="affiche;PHP:Var Name;C:\wamp\www\TP\ajout_données_users.php;f2;33;10;33;;C:\wamp\www\TP\ajout_donnees_users.php;f2;33;10;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="array_favoris;PHP:Var Name;C:\wamp\www\TP\gestion_favoris.php;f10;12;24;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="chemin;PHP:Var Name;C:\wamp\www\TP\Codelobster0.php;f2;3;9;3;;C:\wamp\www\TP\ajout_données_users.php;f2;4;9;4;;C:\wamp\www\TP\favoris.php;f0;7;7;7;;C:\wamp\www\TP\ajout_donnees_users.php;f2;4;9;4;;C:\wamp\www\TP\details_produit.php;f6;11;13;11;;C:\wamp\www\TP\gestion_favoris.php;f6;5;13;5;;C:\wamp\www\TP\testcreationadduser.php;f0;20;7;20;;C:\wamp\www\TP\inscription.php;f4;10;11;10;;C:\wamp\www\TP\menu.php;f3;24;10;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="contenu_du_fichier;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f0;23;19;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="contenu_du_tableau;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f1;31;20;31;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="email_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f2;16;13;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="current_id;PHP:Var Name;C:\wamp\www\TP\favoris.php;f2;15;13;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="currentFile;PHP:Var Name;C:\wamp\www\TP\menu.php;f2;25;14;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="details_id;PHP:Var Name;C:\wamp\www\TP\menu.php;f12;109;23;109;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="email_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f4;17;15;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="etudiant;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f19;28;28;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="etudiants;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f0;24;10;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
+			<treenode node="favoris;PHP:Var Name;C:\wamp\www\TP\Codelobster0.php;f2;8;10;8;;C:\wamp\www\TP\details_produit.php;f48;15;56;15;;C:\wamp\www\TP\gestion_favoris.php;f48;11;56;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="fichier;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f0;22;8;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="id_produit;PHP:Var Name;C:\wamp\www\TP\produits.php;f33;31;44;31;;C:\wamp\www\TP\details_produit.php;f6;1;17;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="i;PHP:Var Name;C:\wamp\www\TP\gestion_favoris.php;f8;10;10;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="id;PHP:Var Name;C:\wamp\www\TP\favoris.php;f45;16;48;16;;C:\wamp\www\TP\gestion_favoris.php;f24;8;27;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="id_produit;PHP:Var Name;C:\wamp\www\TP\favoris.php;f50;16;61;16;;C:\wamp\www\TP\produits.php;f33;31;44;31;;C:\wamp\www\TP\details_produit.php;f8;3;19;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="info;PHP:Var Name;C:\wamp\www\TP\produits.php;f46;31;51;31;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="name_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f2;14;12;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="name_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f4;15;14;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="nas;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f13;28;17;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="pass_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f2;17;12;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="num;PHP:Var Name;C:\wamp\www\TP\gestion_favoris.php;f42;11;46;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="prenom_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f2;15;14;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="ou;PHP:Var Name;C:\wamp\www\TP\ajout_données_users.php;f2;19;5;19;;C:\wamp\www\TP\ajout_donnees_users.php;f2;19;5;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="produits;PHP:Var Name;C:\wamp\www\TP\produits.php;f20;31;29;31;;C:\wamp\www\TP\details_produit.php;f24;33;33;33;;C:\wamp\www\TP\data\bdd.inc;f0;2;9;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="ou2;PHP:Var Name;C:\wamp\www\TP\ajout_données_users.php;f2;20;6;20;;C:\wamp\www\TP\ajout_donnees_users.php;f2;20;6;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="user;PHP:Var Name;C:\wamp\www\TP\inscription.php;f2;19;7;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="parts;PHP:Var Name;C:\wamp\www\TP\menu.php;f2;26;8;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="users;PHP:Var Name;C:\wamp\www\TP\testcreationadduser.php;f0;2;6;2;;C:\wamp\www\TP\menu.php;f2;10;8;10;;C:\wamp\www\TP\inscription.php;f2;11;8;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="pass_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f4;18;14;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="utilisateur;PHP:Var Name;C:\wamp\www\TP\menu.php;f1;30;13;30;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="prenom_data;PHP:Var Name;C:\wamp\www\TP\inscription.php;f4;16;16;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="produits;PHP:Var Name;C:\wamp\www\TP\data\bdd.inc;f0;2;9;2;;C:\wamp\www\TP\favoris.php;f47;63;56;63;;C:\wamp\www\TP\produits.php;f20;31;29;31;;C:\wamp\www\TP\details_produit.php;f24;67;33;67;;C:\wamp\www\TP\gestion_favoris.php;f15;74;24;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="size_favoris;PHP:Var Name;C:\wamp\www\TP\details_produit.php;f2;28;15;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="trouve;PHP:Var Name;C:\wamp\www\TP\details_produit.php;f6;5;13;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="trouver;PHP:Var Name;C:\wamp\www\TP\menu.php;f8;8;16;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="user;PHP:Var Name;C:\wamp\www\TP\gestion_favoris.php;f29;8;34;8;;C:\wamp\www\TP\inscription.php;f4;20;9;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="user_logged;PHP:Var Name;C:\wamp\www\TP\favoris.php;f0;10;12;10;;C:\wamp\www\TP\details_produit.php;f6;8;18;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="users;PHP:Var Name;C:\wamp\www\TP\Codelobster0.php;f2;5;8;5;;C:\wamp\www\TP\ajout_données_users.php;f2;6;8;6;;C:\wamp\www\TP\favoris.php;f0;8;6;8;;C:\wamp\www\TP\ajout_donnees_users.php;f2;6;8;6;;C:\wamp\www\TP\details_produit.php;f6;12;12;12;;C:\wamp\www\TP\gestion_favoris.php;f6;6;12;6;;C:\wamp\www\TP\testcreationadduser.php;f0;2;6;2;;C:\wamp\www\TP\inscription.php;f4;12;10;12;;C:\wamp\www\TP\menu.php;f6;31;12;31;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="utilisateur;PHP:Var Name;C:\wamp\www\TP\menu.php;f1;36;13;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 		</phptree>
 		<jstree>
@@ -980,7 +1013,7 @@
 				<treenode node="u;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f19093;4;19094;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="error;JS:Function Name;C:\wamp\www\TP\assets\js\main.js;f0;0;1;12;;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f10901;3;10976;3;;;;vpos;;v;;r;;d29,0;;b0,0;;mitem;;paction;;p">
+			<treenode node="error;JS:Function Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f10901;3;10976;3;;C:\wamp\www\TP\assets\js\main.js;f0;0;1;12;;;;vpos;;v;;r;;d29,0;;b0,0;;mitem;;paction;;p">
 				<treenode node="action;JS:JS Var Name;C:\wamp\www\TP\assets\js\main.js;f21;0;27;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="e;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f10916;3;10917;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -1416,7 +1449,7 @@
 			</treenode>
 			<treenode node="_default;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f25729;4;25737;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_gaq;JS:JS Var Name;C:\wamp\www\TP\index.php;f10;20;14;20;;C:\wamp\www\TP\inscription.php;f10;62;14;62;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_gaq;JS:JS Var Name;C:\wamp\www\TP\index.php;f10;20;14;20;;C:\wamp\www\TP\favoris.php;f10;43;14;43;;C:\wamp\www\TP\produits.php;f10;18;14;18;;C:\wamp\www\TP\details_produit.php;f10;54;14;54;;C:\wamp\www\TP\gestion_favoris.php;f10;44;14;44;;C:\wamp\www\TP\inscription.php;f10;63;14;63;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="a;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js;f97;12;98;12;;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f49;2;50;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3670;5;3671;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1512,7 +1545,7 @@
 			</treenode>
 			<treenode node="Dn;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f8991;4;8993;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="document;JS:JS Var Name;C:\wamp\www\TP\assets\js\main.js;f2;233;10;233;;C:\wamp\www\TP\assets\js\jquery.fancybox.js;f19;12;27;12;;C:\wamp\www\TP\index.php;f17;25;25;25;;C:\wamp\www\TP\inscription.php;f17;67;25;67;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="document;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.fancybox.js;f19;12;27;12;;C:\wamp\www\TP\index.php;f17;25;25;25;;C:\wamp\www\TP\favoris.php;f17;48;25;48;;C:\wamp\www\TP\produits.php;f17;23;25;23;;C:\wamp\www\TP\details_produit.php;f17;59;25;59;;C:\wamp\www\TP\gestion_favoris.php;f17;49;25;49;;C:\wamp\www\TP\assets\js\main.js;f2;233;10;233;;C:\wamp\www\TP\inscription.php;f17;68;25;68;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="e;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js;f172;12;173;12;;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f12;2;13;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f10;5;11;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1570,7 +1603,7 @@
 			</treenode>
 			<treenode node="G;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f17860;2;17861;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="ga;JS:JS Var Name;C:\wamp\www\TP\index.php;f12;25;14;25;;C:\wamp\www\TP\inscription.php;f12;67;14;67;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="ga;JS:JS Var Name;C:\wamp\www\TP\index.php;f12;25;14;25;;C:\wamp\www\TP\favoris.php;f12;48;14;48;;C:\wamp\www\TP\produits.php;f12;23;14;23;;C:\wamp\www\TP\details_produit.php;f12;59;14;59;;C:\wamp\www\TP\gestion_favoris.php;f12;49;14;49;;C:\wamp\www\TP\inscription.php;f12;68;14;68;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="GET;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f28767;3;28770;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1800,7 +1833,7 @@
 			</treenode>
 			<treenode node="rt;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f24675;2;24677;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="s;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f62;2;63;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3600;5;3601;5;;C:\wamp\www\TP\index.php;f12;27;13;27;;C:\wamp\www\TP\inscription.php;f12;69;13;69;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="s;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f62;2;63;2;;C:\wamp\www\TP\assets\js\bootstrap.min.js;f3600;5;3601;5;;C:\wamp\www\TP\index.php;f12;27;13;27;;C:\wamp\www\TP\favoris.php;f12;50;13;50;;C:\wamp\www\TP\produits.php;f12;25;13;25;;C:\wamp\www\TP\details_produit.php;f12;61;13;61;;C:\wamp\www\TP\gestion_favoris.php;f12;51;13;51;;C:\wamp\www\TP\inscription.php;f12;70;13;70;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="S;JS:JS Var Name;C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js;f433;2;434;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -1928,30 +1961,33 @@
 	</codestructure><todoblock>
 	</todoblock>
 	<filescache>
-		<file name="C:\wamp\www\TP\managers\texteManager.php" crc="-1752493716"/>
-		<file name="C:\wamp\www\TP\data\user.inc" crc="-1326007539"/>
+		<file name="C:\wamp\www\TP\managers\texteManager.php" crc="1418463829"/>
+		<file name="C:\wamp\www\TP\data\user.inc" crc="-1298686712"/>
 		<file name="C:\wamp\www\TP\data\bdd.inc" crc="-1126414574"/>
-		<file name="C:\wamp\www\TP\assets\js\main.js" crc="-1426431264"/>
+		<file name="C:\wamp\www\TP\assets\js\main.js" crc="-58477583"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery.mousewheel-3.0.6.pack.js" crc="476027430"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery.fancybox.js" crc="-1803692490"/>
 		<file name="C:\wamp\www\TP\assets\js\jquery-1.9.1.min.js" crc="1005439900"/>
 		<file name="C:\wamp\www\TP\assets\js\bootstrap.min.js" crc="-662170226"/>
-		<file name="C:\wamp\www\TP\assets\css\main.css" crc="1898159001"/>
+		<file name="C:\wamp\www\TP\assets\css\main.css" crc="-1217681688"/>
 		<file name="C:\wamp\www\TP\assets\css\jquery.fancybox.css" crc="-1102973206"/>
 		<file name="C:\wamp\www\TP\assets\css\bootstrap.min.css" crc="-673385758"/>
 		<file name="C:\wamp\www\TP\assets\css\bootstrap-responsive.min.css" crc="1256031329"/>
 		<file name="C:\wamp\www\TP\testcreationadduser.php" crc="-950643048"/>
 		<file name="C:\wamp\www\TP\sample.php" crc="-1555763280"/>
 		<file name="C:\wamp\www\TP\produits.php" crc="-610425434"/>
-		<file name="C:\wamp\www\TP\menu.php" crc="-1492761553"/>
-		<file name="C:\wamp\www\TP\inscription.php" crc="1215227519"/>
+		<file name="C:\wamp\www\TP\menu.php" crc="958925115"/>
+		<file name="C:\wamp\www\TP\inscription.php" crc="622227105"/>
 		<file name="C:\wamp\www\TP\initialisation.inc" crc="2143680841"/>
 		<file name="C:\wamp\www\TP\index.php" crc="-1747867751"/>
+		<file name="C:\wamp\www\TP\gestion_favoris.php" crc="1057941462"/>
 		<file name="C:\wamp\www\TP\galerie.php" crc="1895678916"/>
 		<file name="C:\wamp\www\TP\footer.php" crc="1631951176"/>
-		<file name="C:\wamp\www\TP\favoris.php" crc="1425350225"/>
-		<file name="C:\wamp\www\TP\details_produit.php" crc="1808959192"/>
+		<file name="C:\wamp\www\TP\favoris.php" crc="779277983"/>
+		<file name="C:\wamp\www\TP\details_produit.php" crc="-811875161"/>
 		<file name="C:\wamp\www\TP\contact.php" crc="-552174053"/>
+		<file name="C:\wamp\www\TP\confirmation_inscription.php" crc="-464143215"/>
 		<file name="C:\wamp\www\TP\confirmation.php" crc="-620333249"/>
+		<file name="C:\wamp\www\TP\ajout_donnees_users.php" crc="909599830"/>
 	</filescache>
 </project>

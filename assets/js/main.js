@@ -297,7 +297,17 @@ $(document).ready(function() {
     //alert('confirmation.html!!!!!');
   }
   
-  
+  if ($("body").data("title") === "confirmation_inscription.php") {
+    var url = "index.php";
+
+    //5000 is the number of milliseconds (or 5 seconds) that you want to wait before redirection.
+    var delay = 10000;
+    setTimeout(function() {
+      window.location.replace(url);
+    }, delay);
+    
+    //alert('confirmation.html!!!!!');
+  }
 });
 
 

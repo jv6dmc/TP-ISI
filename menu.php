@@ -40,7 +40,7 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 		// Il peut se logger
 
 		//echo('Bienvenue');
-    $_SESSION['ID'] = $utilisateur;		
+    $_SESSION['ID'] = $utilisateur;
 		$trouver=true;
     if ($parts[count($parts) - 1]=="details_produit.php") {
           if (!isset($_GET['reload'])) { ?>
@@ -84,14 +84,14 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
           <ul id="deconnexion_admin">
             <li class="connexion"><a href="gestion_favoris.php">Section admin</a></li>
             <li class="connexion">|</li>
-            <li class="connexion"><a href="favoris.php">Mes favoris</a></li>
+            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($users[$_SESSION["ID"]]["favoris"]));?>)</a></li>
             <li class="connexion">|</li>
             <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
           </ul>
           <?php } else { ?>
           
           <ul id="deconnexion">
-            <li class="connexion"><a href="favoris.php">Mes favoris</a></li>
+            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($users[$_SESSION["ID"]]["favoris"]));?>)</a></li>
             <li class="connexion">|</li>
             <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
           </ul>

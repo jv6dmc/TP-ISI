@@ -35,7 +35,7 @@ if (count($_POST)>0){
     $users[$_POST['username']]=$user;
     write_file($chemin,$users);
     
-    echo("ca marche inscription");
+    header("location: confirmation_inscription.php");
   }else if(count($_POST)==0) {
     
 }
