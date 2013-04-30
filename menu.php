@@ -1,5 +1,5 @@
 <?php
-  //echo($_SERVER["PHP_SELF"]);
+  echo($_SERVER["PHP_SELF"]);
   if (!isset($_GET['deconnection'])) {
       if (!isset($_SESSION)) {
         session_start();
