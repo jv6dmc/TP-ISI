@@ -56,7 +56,7 @@
               <li class="lbl_contact autre_sujet"><label>Autre</label></li>
               <li class='autre_sujet'><input type="text" name="sujet_autre" id="sujet_autre" placeholder="Inscrire le sujet"/></li>
               <li class="lbl_contact photo"></li>
-              <li class="photo"><input type="checkbox" name="macheckbox" id="checkbox01"/><label id='lbl_add'>Ajouter une photo</label></li>
+              <li class="photo"><input type="checkbox" name="macheckbox" id="checkbox01" disabled=""/><label id='lbl_add'>Ajouter une photo (Option non disponible)</label></li>
               <li class="lbl_contact photo input_file"></li>
               <li class="photo input_file"><input type="file" name="mainputfile" id="inputfile01"/></li>
               <li class="lbl_contact photoshop"><label>Version de photoshop</label></li>

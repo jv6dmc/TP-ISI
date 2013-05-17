@@ -19,8 +19,8 @@
     header('location: index.php');
   }
   
-	require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-  require_once("managers/texteManager.php");
+	//include($_SERVER['DOCUMENT_ROOT'].'initialisation.inc');
+  //include("managers/texteManager.php");
 	
    $chemin="data/user.inc";
   $currentFile = $_SERVER["PHP_SELF"];
@@ -29,31 +29,34 @@
   if ($parts[count($parts) - 1]=="inscription.php") {
   } else if (isset($_GET['add'])){
   } else {
-      $users=read_file($chemin);
+      //$users=read_file($chemin);
   }
 //var_dump($_POST);
 if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 	// c'est un loop back'
-	$utilisateur = find_User_ByIdPw($_POST['login_username'], $_POST['login_password']);
-	//echo($utilisateur);
-  if ($utilisateur!='0'){
-		// Il peut se logger
+	
+  $username = $_POST['login_username'];
+  $password = $_POST['login_password'];
+  
+  include("managers/connect_bdd.php");
+  
+  $result = $bdd->query("SELECT * FROM users WHERE username = '$username'&&password='$password'");
+  if ($result->num_rows) {
+   // Il peut se logger
 
 		//echo('Bienvenue');
-    $_SESSION['ID'] = $utilisateur;
+    $_SESSION['ID'] = $username;
 		$trouver=true;
     if ($parts[count($parts) - 1]=="details_produit.php") {
           if (!isset($_GET['reload'])) { ?>
           <meta http-equiv=Refresh content="0;url=<?php echo($_SERVER["PHP_SELF"]);?>?reload=1&id=<?php echo($_GET['id']);?>">';
           <?php }
     }
-		
-	}
-	else{
-		//Afficher desolé
+  } else {
+   //Afficher desolé
     //echo("pas marcher!!!!!!!!!!!!!!!!!!!!!!");
     $trouver=false;
-	}
+  }
 	header("");	
 }
 
@@ -76,22 +79,28 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 			<abbr title="Phone">Tel:</abbr> (514) 456-7890<br>
 			<a href="mailto:#">worldpictures@gmail.com</a>
 		  </address>  
-        <?php if ($trouver==TRUE) { ?>
+        <?php if ($trouver==TRUE) {
+          $user_logged = $_SESSION["ID"];
+           include("managers/connect_bdd.php");   
+           $query = $bdd->query("SELECT `data` FROM `users` WHERE `username` = '$user_logged'");
+           $result = $query->fetch_object();     
+           $favoris = unserialize($result->data);
+           ?>
           <ul id="msg_welcome">
             <li>Bienvenue <?php echo($_SESSION["ID"]);?></li>
           </ul>
           <?php if ($_SESSION["ID"]=="admin") { ?>
           <ul id="deconnexion_admin">
-            <li class="connexion"><a href="gestion_favoris.php">Section admin</a></li>
+            <li class="connexion"><a href="section_admin.php">Section admin</a></li>
             <li class="connexion">|</li>
-            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($users[$_SESSION["ID"]]["favoris"]));?>)</a></li>
+            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($favoris));?>)</a></li>
             <li class="connexion">|</li>
             <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
           </ul>
           <?php } else { ?>
           
           <ul id="deconnexion">
-            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($users[$_SESSION["ID"]]["favoris"]));?>)</a></li>
+            <li class="connexion"><a href="favoris.php">Mes favoris(<?php echo(count($favoris));?>)</a></li>
             <li class="connexion">|</li>
             <li class="connexion "><a href="<?php echo($_SERVER["PHP_SELF"]);?>?deconnection=true">Déconnexion</a></li>
           </ul>
@@ -145,7 +154,8 @@ if (isset($_POST['login_username'])&& isset($_POST['login_password'])){
 				<li class="divider-vertical"></li>
 				<li><a href="produits.php">Produits</a></li>
 				<li class="divider-vertical"></li>
-			  </ul>
+			  <li class="divider-vertical"></li>
+        </ul>
 			  <ul class="nav pull-right">
 				<li class="divider-vertical"></li>
 				<li>

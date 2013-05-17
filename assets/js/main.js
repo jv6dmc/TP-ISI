@@ -222,7 +222,6 @@ function valide_formulaire() {
   confirm_valid[3] = check_item("url", "link");
   confirm_valid[4] = check_item("select01", "sujet");
   confirm_valid[5] = check_item("commentaires", "text");
-  
   if (confirm_valid[0]==true && confirm_valid[1]==true && confirm_valid[2]==true &&
      confirm_valid[3]==true && confirm_valid[4]==true && confirm_valid[5]==true) {
        return true;
@@ -310,6 +309,40 @@ $(document).ready(function() {
   }
 });
 
+/*-------inscription.php------*/
+ 
+  function valide_formulaire_inscription() {
+    var confirm_valid = Array('');
+    confirm_valid[0] = check_item("name", "text");
+    confirm_valid[1] = check_item("prenom", "text");
+    confirm_valid[2] = check_item("email", "email");
+    confirm_valid[3] = check_item("user", "text");
+    confirm_valid[4] = check_item("pass", "text");
+    confirm_valid[5] = check_item("conf_password", "text");
+    //alert($('#pass').val());
+    if (confirm_valid[0]==true && confirm_valid[1]==true && confirm_valid[2]==true &&
+       confirm_valid[3]==true && confirm_valid[4]==true && confirm_valid[5]==true) {
+         return true;
+    } else {
+         return false;
+    }
+  }
+
+  $(document).ready(function() {
+    
+    $('#btn_submit_inscription').click(function() {
+      
+      
+      if (valide_formulaire_inscription()==true) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+  });
+
+
+/*-------inscription.php---fin---*/
 
  /*Debut tooltip et hover reseau sociaux +popover page index.php + fancybox page galerie.php  */
 
@@ -404,4 +437,64 @@ $(document).ready(function() {
 	}); 
 	return false;
 	});
+});
+
+/*-----ajout_photos.php----*/
+/*function valide_add_photo() {
+  var confirm_valid = Array('');
+    confirm_valid[0] = check_item("nom_categorie", "text");
+    
+    if (confirm_valid[0]==true) {
+         return true;
+    } else {
+         return false;
+    }
+}
+
+
+function valide_formulaire_ajout_photos() {
+    var result = false;
+    var item = $('#categorie').val();
+    switch (item) {
+      case '00': error($('categorie'), false);
+                 result=false;
+                 break;
+      case 'add':result = valide_add_photo();
+                 error($('categorie'), true);
+                 break;
+    }
+    alert(result);
+    return result;
+    
+  }
+*/
+function add_categorie() {
+  $('.add_categorie').show();
+}
+
+$(document).ready(function() {
+  $('.add_categorie').hide();
+  $('#categorie').change(function() {
+    var item = $(this).val();
+    switch(item) {
+      case 'add': add_categorie();
+                 break;
+      default:
+        $('.add_categorie').hide();
+        break;
+    }
+  });
+  /*
+  $('#btn_ajouter_photos').click(function() {  
+      alert("test1231231231313213132312312");
+      return false;
+      if(valide_formulaire_ajout_photos()==true) {
+        return false;
+      } else {
+        return false;
+      }
+      alert("test2");
+      
+    })
+  */
 });

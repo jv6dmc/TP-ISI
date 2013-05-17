@@ -1,28 +1,32 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-      require_once("managers/texteManager.php");
-      include('data/bdd.inc');
-      
-      // 1.Lecture de tous les users
-      $chemin="data/user.inc";
-      $users=read_file($chemin);
-      
-      foreach($users as $id=>$user){
-        
+<?php
+session_start();
+if ($_SESSION['ID'] == "admin") {
+  
+   
+  include("managers/connect_bdd.php");
+  
+  $result = $bdd->query("SELECT * FROM users");
+  
+  while( $row = $result->fetch_array(MYSQLI_NUM)){
+    $users[$row[0]]['username'] = $row[1];
+    $users[$row[0]]['password'] = $row[2];
+    $users[$row[0]]['nom'] = $row[3];
+    $users[$row[0]]['prenom'] = $row[4];
+    $users[$row[0]]['email'] = $row[5];
+    $users[$row[0]]['data'] = unserialize($row[6]);
+  }
+
+ foreach($users as $id=>$user){
+        $array_favoris[$id]['username'] = $users[$id]['username'];
         $i=0;
-        foreach($users[$id]['favoris'] as $num=>$favoris) {
+        foreach($users[$id]['data'] as $num=>$favoris) {
           $array_favoris[$id][$i] = $favoris;
           $i++;
         }
       }
-   // var_dump($array_favoris);
-
-  // var_dump($users);
-
-
-
-
-
-
+} else {
+  header("location: index.php");
+}
 
 ?>
 <!DOCTYPE html>
@@ -40,19 +44,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     </head>
     <body>
-     <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39031065-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
 	  <?php include("menu.php"); ?>
     <div id="bloc_gestion_favoris">
       <h3>Gestion des données</h3>
@@ -70,7 +61,7 @@
 <?php foreach($array_favoris as $id=>$user) {
 if (isset($array_favoris[$id])){ ?>
 <tr>
-<td rowspan="<?php echo(count($array_favoris[$id])); ?>"><?php echo($id);?></td>
+<td rowspan="<?php echo(count($array_favoris[$id])); ?>"><?php echo($array_favoris[$id]['username']);?></td>
 <td><?php echo($array_favoris[$id][0]);?></td>
 <td><?php echo($produits[$array_favoris[$id][0]]['titre']);?></td>
 </tr>
@@ -100,7 +91,7 @@ if (isset($array_favoris[$id])){ ?>
 
 <?php foreach($users as $id=>$user){?>
 <tr>
-<td><?php echo($id);?></td>
+<td><?php echo($users[$id]['username']);?></td>
 <td><?php echo($users[$id]['nom']);?></td>
 <td><?php echo($users[$id]['prenom']);?></td>
 <td><?php echo($users[$id]['email']);?></td>

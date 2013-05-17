@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-      require_once("managers/texteManager.php");
+<?php include($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
+      include("managers/texteManager.php");
        //AJOUT
   // 1.Lecture de tous les users
   $chemin="data/user.inc";
