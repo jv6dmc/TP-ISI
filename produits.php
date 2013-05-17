@@ -1,4 +1,16 @@
-<?php include('data/bdd.inc');?>
+<?php 
+include("managers/connect_bdd.php");
+  $result = $bdd->query("SELECT * FROM produits");
+  
+  while( $row = $result->fetch_array(MYSQLI_NUM)){
+    $produits[$row[0]]['titre'] = $row[1];
+    $produits[$row[0]]['description'] = $row[2];
+    $produits[$row[0]]['image'] = $row[3];
+    $produits[$row[0]]['prix'] = $row[4];
+    $produits[$row[0]]['details'] = $row[5];
+  }
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,19 +26,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     </head>
     <body>
-     <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39031065-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
 	  <?php include("menu.php"); ?>
     <div id="bloc_produits">
       <?php foreach($produits as $id_produit=>$info) {?>

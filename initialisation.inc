@@ -1,5 +1,5 @@
 <?php
-define('PROJET', 'TP/');
+define('PROJET', '');
 define('ROOT', $_SERVER['DOCUMENT_ROOT'].PROJET);
 
 

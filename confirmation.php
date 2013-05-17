@@ -1,4 +1,36 @@
-<?php ?>
+<?php 
+include("managers/texteManager.php");
+
+$sujet = $_POST['sujet_message'];
+
+switch ($sujet) {
+  case 01:
+    $sujet = "Photographie";
+    $message = message_photo();
+    break;
+  case 02:
+    $sujet = "Photoshop";
+    $ver_ps = ps_ver($_POST['ps_ver']);
+    $ver_os = os_ver($_POST['os']);
+    $message = message_ps($sujet, $ver_ps, $ver_os);
+    break;
+  case 03:
+    $sujet = "Appareil photo";
+    $appareil = appareil();
+    $message = message_appareil($sujet, $appareil);
+    break;
+  case 04:
+    $sujet = $_POST['sujet_autre'];
+    $message = message_autre($sujet);
+    break;
+}
+
+$subject = "$sujet";
+$to = "";
+if (sujet!="Photographie") {
+	mail($to, $subject, $message);  
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>

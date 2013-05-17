@@ -218,7 +218,7 @@ ul li {
 
 /*-------contact.html-----*/
 
-#bloc_contact,#bloc_inscription {
+#bloc_contact,#bloc_inscription, #bloc_add_photos {
   background-color:#eee;
   /*margin-top:-80px;*/
   -moz-border-radius: 6px;
@@ -228,7 +228,7 @@ ul li {
     padding-bottom: 10px;
 }
 
-#bloc_contact>h3 ,#bloc_inscription>h3 {
+#bloc_contact>h3 ,#bloc_inscription>h3, #bloc_add_photos>h3 {
   padding-top: 40px;
 }
 
@@ -242,7 +242,7 @@ ul li {
   padding-right: 30px;
 }
 
-#bloc_contact ul,#bloc_inscription ul {
+#bloc_contact ul,#bloc_inscription ul, #bloc_add_photos ul {
   margin-top: 60px;
 }
 
@@ -252,7 +252,7 @@ ul li {
 }
 
 
-#bloc_contact #form,#bloc_inscription #form,
+#bloc_contact #form,#bloc_inscription #form, #bloc_add_photos #form,
 #map {
   border: 2px solid black;
   width:800px;
@@ -366,8 +366,7 @@ a.thumbnail {
 }
 
 #galerie-intro {
-  height:120px;
- padding:10px;
+  padding:10px;
 }
 
 /*------produits.php-----*/
@@ -615,7 +614,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 	margin-bottom: 20px;
 }
 
-#bloc_inscription #submit {
+#bloc_inscription #submit, #bloc_add_photos #submit {
   float:left;
   margin-left:70px;
 }
@@ -635,4 +634,14 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 }
 #bloc_gestion_favoris>table {
   background-color:#D6D6D6;
+}
+
+/*----ajout-photos.php----*/
+#bloc_add_photos #form {
+  margin-bottom:30px;
+  padding-bottom: 60px;
+}
+
+#bloc_add_photos #form #btn_reset, #bloc_add_photos #form #btn_ajouter_photos {
+  margin-top:20px;
 }

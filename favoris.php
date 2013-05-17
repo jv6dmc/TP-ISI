@@ -1,26 +1,41 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'TP/'.'initialisation.inc');
-      require_once("managers/texteManager.php");
-      include('data/bdd.inc');
-
+<?php 
 session_start();
-//var_dump($_SESSION);
+if (!isset($_SESSION['ID'])) {
+  header("location: index.php");
+}
+error_reporting(0);
 
-$chemin="data/user.inc";
-$users=read_file($chemin);
+include("managers/connect_bdd.php");
+  $result = $bdd->query("SELECT * FROM produits");
+  
+  while( $row = $result->fetch_array(MYSQLI_NUM)){
+    $produits[$row[0]]['titre'] = $row[1];
+    $produits[$row[0]]['description'] = $row[2];
+    $produits[$row[0]]['image'] = $row[3];
+    $produits[$row[0]]['prix'] = $row[4];
+    $produits[$row[0]]['details'] = $row[5];
+  }
 
-$user_logged = $_SESSION["ID"];
 
+        $user_logged = $_SESSION["ID"];
 
+        include("managers/connect_bdd.php");
+        
+        $query = $bdd->query("SELECT `data` FROM `users` WHERE `username` = '$user_logged'");
+        $result = $query->fetch_object();
+        $favoris = unserialize($result->data);
+        
 if (isset($_GET['remove'])) {
   //echo($_GET['remove']);
   $current_id = $_GET['remove'];
-  foreach($users[$user_logged]['favoris'] as $id=>$id_produit) {
+  foreach($favoris as $id=>$id_produit) {
     if ($id_produit == $current_id) {
-       unset($users[$user_logged]['favoris'][$id]);
+       unset($favoris[$id]);
        //echo($id);
     }
   }
-   write_file($chemin,$users);
+  $favoris = serialize($favoris);
+  $bdd->query("UPDATE `users` SET `data` = '$favoris' WHERE `username` = '$user_logged'"); 
 }      
 ?>
 
@@ -39,23 +54,10 @@ if (isset($_GET['remove'])) {
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     </head>
     <body>
-     <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39031065-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
 	  <?php include("menu.php"); ?>
     <div id="bloc_favoris">
       <h3>Mes favoris</h3>
-      <?php foreach($users[$user_logged]['favoris'] as $id_produit) {?>
+      <?php foreach($favoris as $id_produit) {?>
         <ul>
           <li><a href="favoris.php?remove=<?php echo($id_produit);?>" class="btn btn-danger btn-mini remove_favoris" data-original-title="" title="">Retirer des favoris</a></li>
         </ul>
